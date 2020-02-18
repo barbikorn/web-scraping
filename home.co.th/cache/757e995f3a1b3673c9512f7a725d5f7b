@@ -1,0 +1,2191 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="theme-color" content="#627ad1">
+    <meta name="msapplication-navbutton-color" content="#627ad1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#627ad1">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow" />
+    <meta property="og:url" content="https://www.home.co.th/d/housedeevelopment" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="บริษัท เฮ้าส์ ดีเวลลอปเมนท์ จำกัด" />
+	<meta property="og:description" content="รวมโครงการบ้าน คอนโด ทาวน์โฮม ทาวน์เฮ้าส์ จาก บริษัท เฮ้าส์ ดีเวลลอปเมนท์ จำกัด" />
+
+
+	<meta property="og:image" content="https://www.home.co.th/images/img_v/img_Developer/20180829-142736708-LOGO.jpg" />
+    
+    <title>บริษัท เฮ้าส์ ดีเวลลอปเมนท์ จำกัด</title>
+    <meta name="description" content="รวมโครงการบ้าน คอนโด ทาวน์โฮม ทาวน์เฮ้าส์ จาก บริษัท เฮ้าส์ ดีเวลลอปเมนท์ จำกัด">
+    <meta name="keywords" content="บริษัท เฮ้าส์ ดีเวลลอปเมนท์ จำกัด เดอะแพสเซจ รามอินทรา-คู้บอน">
+    <meta name="rating" content="general" />
+    <meta name="author" content="www.home.co.th บริษัท โฮมบายเออร์ไกด์ จำกัด">
+    <meta name="copyright" content="Digital Media Home Buyers Guide">
+    <meta name="revisit-after" content="1 days">
+    <meta name="expires" content="never">
+    <meta name="distribution" content="global" /> 
+      <script src="https://www.home.co.th/bower_components/jQuery/dist/jquery.min.js"></script>
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="/css/DheadDF.min.css" rel="stylesheet">
+      <script src="/js/projCookie5.min.js"></script>
+
+      <script src='https://www.google.com/recaptcha/api.js'></script>
+     
+  </head>
+  <body>
+    <link href="https://www.home.co.th/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"> 
+    <link href="https://www.home.co.th/bower_components/bootstrap-block-grid/dist/bootstrap3-block-grid.min.css" rel="stylesheet"> 
+    <link href="https://www.home.co.th/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet"> 
+    <link href="https://www.home.co.th/bower_components/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet"> 
+    <link href="https://www.home.co.th/bower_components/hover/css/hover-min.css" rel="stylesheet"> 
+    <link href="https://www.home.co.th/bower_components/javascript-auto-complete/auto-complete.css" rel="stylesheet"> 
+    <link href="https://www.home.co.th/bower_components/nstSlider/dist/jquery.nstSlider.min.css" rel="stylesheet"> 
+    <link href="https://www.home.co.th/js/royalslider/royalslider.css" rel="stylesheet"> 
+    <link href="https://www.home.co.th/js/royalslider/skins/default/rs-default.css" rel="stylesheet">  
+    <link href="https://www.home.co.th/js/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">  
+    <link href="https://www.home.co.th/css/magnific-popup.min.css" rel="stylesheet">  
+    <link href="/css/fonts.min.css" rel="stylesheet"> 
+    <link href="/css/DmainDF.min.css" rel="stylesheet"> 
+    <link href="/css/Dhome-style.min.css" rel="stylesheet">
+      <style>
+        img[alt="ทำเล"] ,img[alt="จุดเด่น"],img[alt="บริษัท"],img[alt="ราคา"]{ float:left;margin-right:7px;width:16px; }
+        img[alt="ขับรถ"],img[alt="เดิน"]{ margin-right:7px;width:16px; }
+    </style>
+      <style>
+        .rsDefault .rsBullets {
+            z-index: 21!important;
+            padding-top: 10px;
+            text-align: center!important;
+            overflow: visible!important;
+            display: block;
+                 width: 100%;
+                 height: 20px;
+        }
+        .royalSlider .rsNav .rsBullet span {
+            width: 8px!important;
+            height: 8px!important;
+        }
+        .royalSlider .rsNav .rsBullet.rsNavSelected span {
+            background: #000!important;
+            width: 12px!important;
+            height: 12px!important;
+        }
+        #newprojectads .rsBullets .rsBullet {
+             background: #e2e2e1;
+             border-radius: 50%;
+          }
+          #newprojectads .rsBullets {
+             text-align: center;
+          }
+          #newprojectads .rsBullets .rsNavSelected {
+             background: #000;
+             border-radius: 50%;
+          }
+             .rsNavItem {
+                width: 8px;
+                height: 8px;
+                padding: 0px;
+                margin-left: 4px;
+                margin-right: 4px;
+                vertical-align: middle;
+                display: inline-block;
+             }
+             .rsDefault .rsBullet span {
+                 display: block;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background: #777;
+             }
+             #vdomodal > .modal-dialog {
+                width: 800px!important;top: -50px!important;
+            }
+             #vdomodal {
+                padding-top: 0%!important;
+            }
+
+             
+      </style>
+      <style>
+                        .shlist div {
+                            /*border: 0 none;*/
+                            display: block;
+                            font-size: 14px;
+                            font-weight: 300;
+                            margin: 0;
+                            padding: 10px 15px;
+                            position: relative;
+                            text-decoration: none;
+                            /*border-bottom: 1px solid #DDDDDD;
+                            border-top: 1px solid #DDDDDD;
+                            background: #4e64b7;*/
+                        }
+                        .shprojlist div,.shprojlist2 div,.shprojlist3 div {
+                            /*border: 0 none;*/
+                            display: block;
+                            font-size: 14px;
+                            font-weight: 300;
+                            margin: 0;
+                            padding: 10px 0px;
+                            position: relative;
+                            text-decoration: none;
+                            /*border-bottom: 1px solid #DDDDDD;
+                            border-top: 1px solid #DDDDDD;
+                            background: #4e64b7;*/
+                        }
+                        .projnext, .projfavi, .projrec ,.sha01 ,.shl01{
+                            background: #4e64b7;
+                            box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+                            box-sizing: border-box;
+                            color:#fff;
+                            border: 1px solid #627ad1;
+                            margin-bottom:3px;
+                            text-align:center;
+                        }
+                        .projnext::before{
+                            content:url('https://www.home.co.th/images/icon/house1.png');
+                            position: absolute;
+                            left: 10px;
+                        }
+                        .projfavi::before{
+                            content:url('https://www.home.co.th/images/icon/locations-20.png');
+                            position: absolute;
+                            left: 10px;
+                        }
+                        .projrec::before{
+                            content:url('https://www.home.co.th/images/icon/house2.png');
+                            position: absolute;
+                            left: 10px;
+                        }
+                        .sha01::before{
+                            content:url('https://www.home.co.th/images/icon/house3.png');
+                            position: absolute;
+                            left: 10px;
+                        }
+                        .shl01::before{
+                            content:url('https://www.home.co.th/images/icon/house4.png');
+                            position: absolute;
+                            left: 10px;
+                        }
+                        .projnext::after,.projfavi::after,.projrec::after,.sha01::after,.shl01::after{
+                            content:url('https://www.home.co.th/images/icon/house5.png');
+                            position: absolute;
+                            right: 10px;
+                        }
+                        .shchk::after{
+                            content:url('https://www.home.co.th/images/icon/house6.png');
+                            position: absolute;
+                            right: 10px;
+                        }
+                        .shprojlist article .image-thumbnail,.shprojlist2 article .image-thumbnail ,.shprojlist3 article .image-thumbnail{
+                            padding: 0px;
+                            margin-bottom: 5px;
+                        }
+                        .shprojlist article .image-thumbnail img,.shprojlist2 article .image-thumbnail img,.shprojlist3 article .image-thumbnail img {
+                            width: 180px!important;height: auto!important;
+                        }
+                        .shlist .atv {
+                            background: #808080;
+                        }
+                        .shlist table img {
+                                margin-top: -8px;
+                                margin-right: 8px;
+                        }
+                      
+                    </style>
+     
+    <style>
+        .page-wrapper.developer .wrapper-company-info { padding:0;padding-bottom: 20px; }
+        .bardlist { background: #ddd; padding:10px; height:80px; }
+        .barditem { border:1px solid #ddd; padding:1px; display: inline-block;}
+        .barditem:hover { border:1px solid #4e64b7;}
+            .barditem img { height: 50px; }
+        .bandlistitem { width: 100%; height:55px;}
+            .bandlistitem .owl-item { min-height: 1px; float: left; }
+            .bandlistitem ul[role="tablist"] { display:none!important; }
+        .owl-next,.owl-prev { position:absolute; top:15px;font-size:20px;  font-weight:bolder; cursor:pointer ;    font-family: 'Glyphicons Halflings';}
+        .owl-next { left:-10px; }
+            .owl-next:before { content: "\e079"; }
+        .owl-prev { right:-10px; }
+            .owl-prev:before { content: "\e080"; }
+        .page-wrapper.developer .wrapper-all-project .list-project .item .detail .places span,.page-wrapper.developer .wrapper-all-project .list-project .item .detail .place span, .page-wrapper.developer .wrapper-all-project .list-project .item .detail .price span { line-height: 1.5em; }
+        .iconhome { -webkit-filter: brightness(900%); /* Safari */ filter: brightness(900%); height: 19px; margin-right: 8px; margin-top: -10px; }
+        .page-wrapper.developer .wrapper-company-info .info-right .wrapper-contact-info .company-contact li { display: inline-block; margin-right:20px; }
+    .page-wrapper.developer .wrapper-all-project .list-project .item .detail .description{ max-height: 121px; overflow:hidden; margin-bottom: 10px; }
+     .page-wrapper.developer .wrapper-all-project .list-project .item .detail .place2 {
+         color:#FFF;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}     .navigations li {
+            display: inline-block;
+            margin: 5px 15px;
+        }
+      .navigations li a{
+            color:#777;
+        }
+      .navigations_scll .navigations li a {
+            color:#777;
+        }
+        #passproject {
+            display:block!important;
+        }
+    </style>
+    <style>
+        .slick-prev,.slick-next,.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
+              background:#bbb;border-radius: 50%;
+          }
+        .slick-next:before {
+              content:none!important;
+          }
+          .slick-next {
+              background:url(https://www.home.co.th/images/mobi/br_r.png)!important;background-size: 20px 20px!important;display: inline-block;
+          }
+          .slick-prev:before {
+              content:none!important;
+          }
+          .slick-prev {
+              background:url(https://www.home.co.th/images/mobi/br_l.png)!important;background-size: 20px 20px!important;display: inline-block;
+          }
+    </style>
+    
+    
+
+
+
+    <div class="wrapper-desktop">
+
+      <div class="dumy-header"></div>
+
+      <header class="header login">
+
+        <div class="wrapper-header clearfix">
+          
+          <div class="logo">
+              <a href="/" title="www.home.co.th">
+                  <img src="/images/logo.png" alt="www.home.co.th" />
+              </a>
+          </div><!-- .logo -->
+
+
+          <div class="search">
+            <form action="/search/">
+              <input type="search" name="q" placeholder="พิมพ์ ชื่อโครงการ หรือ บริษัท หรือ ทำเล ที่ต้องการ" autocomplete="off" />
+              <button type="submit">
+                Submit
+              </button>
+                <div class="seachcomplate"></div>
+            </form>
+              
+          </div>
+          
+          <div class="wrapper-main-menu">
+            <nav class="main-menu">
+                  <ul>
+                    <li><a href="/home" title="Home">บ้าน</a></li>
+                    <li><a href="/condo" title="Condo">คอนโด</a></li>
+                    <li><a href="/review" title="Review">รีวิว</a></li>
+                    <li><a href="/readytomove" title="บ้านพร้อมอยู่">Hot Deal</a></li>
+                    <li><a href="/masstransit" title="บ้าน-คอนโดแนวรถไฟฟ้า">แนวรถไฟฟ้า</a></li>
+                    
+                    <li><a href="/tv" title="คลิปบ้าน-คอนโด">คลิป</a></li> 
+                    <li><a href="/event" title="Event">Event</a></li>
+                    <li>
+                      <button type="button" class="button-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </button>
+                        <style>
+                            .second-menu > li > a {
+                                overflow:hidden;
+                                height:30px!important;
+                            }
+                            .second-menu > li > .focus {
+                                overflow:hidden;
+                                height:auto!important;
+                            }
+                        </style>
+                      <ul class="second-menu">
+                          <li><a href="/map/homeonmap" title="ค้นหาบ้าน-คอนโดบนแผนที่">ค้นหาบ้าน-คอนโดบนแผนที่</a></li>
+                            <li><a href="/hometips" title="Hometips">คำแนะนำ</a></li>
+                            <li><a href="/hometips/decoration" title="Hometips">Living</a></li>
+                            <li><a href="/hometips/news" title="Hometips">ข่าว</a></li>
+                            <li><a href="/bloggers" title="Blogger">Blogger</a></li>
+                            <li><a href="/virtual">Home Buyers VR 360</a></li> 
+                            <li><a href="/classified">มือสอง</a></li>
+                            <li><a href="/hometips/mortgage">สินเชื่อ</a></li>
+                            <li><a href="/chiangmai">เชียงใหม่</a></li>
+                            <li><a href="/eastern">ภาคตะวันออก</a></li>
+                            <li><a href="/khonkaen">ขอนแก่น</a></li>
+                            <li><a href="/korat">นครราชสีมา(โคราช)</a></li>
+                            <li><a href="/homebuilder">รับสร้างบ้าน</a></li>
+                            <li><a href="/home/bookclub">BOOKCLUB</a></li>
+                            <li><a href="/magazine">MAGAZINE ONLINE</a></li>
+                            <li><a href="/contactus">เกี่ยวกับเรา</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+            </nav> <!-- .main-menu -->
+              <!-- When user login success -->
+
+            <div class="login" style="display:block">
+              <a href="javascript:;" title="Login" data-toggle="modal" data-target="#modalLogin">เข้าสู่ระบบ / สมัครสมาชิก</a>
+            </div>
+             <div class="modal fade modalLogin" id="modalLogin" role="dialog">
+                <div class="modal-dialog">
+        
+                  <!-- Modal content-->
+                  <div class="modal-content wrapper-section-login">
+                    <div class="modal-header">
+                      <h4 class="modal-title login">เข้าสู่ระบบ</h4>
+                    </div>
+                    <div class="modal-body">
+                      <div class="wrapper-facebook-login">
+                        <a href="javascript:;" class="facebook-login" onclick="fb_login();">เข้าสู่ระบบด้วย Facebook</a>
+                      </div>
+                      <div class="wrapper-google-login">
+                        <a href="javascript:;" class="google-login" onclick="gg_login();">เข้าสู่ระบบด้วย Google</a>
+                      </div>
+                      <div class="wrapper-login-email">
+                        <span class="title-login-email">หรือเข้าสู่ระบบด้วยอีเมล</span>
+                         <br /> * สมาชิกเดิมใช้ Email แทน User id ในการ login
+                        <form method="post" id="loginform" action="/member/QuickLogin">
+                                <input type="hidden" name="LoginBy" value="" />
+								<input type="email" name="C_EMAIL" placeholder="อีเมล" />
+								<input type="password" name="C_PASS" placeholder="รหัสผ่าน" autocomplete="off" />
+                                <input type="hidden" name="N_PROJNO" id="N_PROJNOlogin" value="0" />
+								<button type="submit">Login</button>
+							</form>
+                      </div>
+                      <div class="wrapper-forget-password">
+                        <a class="forget-password" href="/member/home/forgetpassword">ลืมรหัสผ่าน</a>
+                      </div>
+                    </div>
+
+                    <div class="modal-footer">
+                      <span class="text">ยังไม่ได้เป็นสมาชิก?</span>
+                      <a class="register" href="/member/home/register">ลงทะเบียนสมาชิกใหม่</a>
+                    </div>
+                  </div><!-- .wrapper-section-login -->
+                </div>
+              </div>
+          
+            <!-- End -->
+
+          </div>
+        </div><!-- .wrapper-header-->
+      </header>
+
+     
+
+
+
+
+<div class="page-wrapper page-detail developer">
+
+  <div class="page-hero">
+      <div class="hero-content">
+      		<div class="wrapper-detail col-sm-offset-2 col-sm-8" style="padding:20px 0;">
+                <div class="col-sm-4 text-left"><img data-original="https://www.home.co.th/images/img_v/img_Developer/20180829-142736708-LOGO.jpg" alt="บริษัท เฮ้าส์ ดีเวลลอปเมนท์ จำกัด" style="height: 250px; width: 100%; object-fit: contain" /></div>
+                <div class="col-sm-8 text-center">
+                    <h1 style="color:#FFF; padding-top:85px; font-size:3rem    ">บริษัท เฮ้าส์ ดีเวลลอปเมนท์ จำกัด</h1>
+                </div>
+          </div>
+      </div><!-- .hero-content -->
+  </div><!-- .page-hero -->
+     <p><br /></p>
+	<div class="wrapper-all-project">
+		<div class="container-fluid">
+			<div class="wrapper-title clearfix">
+				
+
+
+                <div class="navigations" style="text-align: center;" >
+            <ul class="navigations" style="margin: 20px 0px 20px -35px;">
+                                                         <li><a href="#ทาวน์โฮม" class="sclltotype tysc" onclick="HDAClick('ทาวน์โฮม','','','','');clicklink('ทาวน์โฮม');"><img class="img-responsive" src="https://www.home.co.th/images/Developer/icon-company4-04.png" style="float: left;height: 25px;margin-right: 5px;margin-top: -5px;" alt="">ทาวน์โฮม</a></li>
+                                                <li><a href="#barddesc" class="sclltotype" onclick="HDAClick('company','','','','');clicklink('barddesc');"><img class="img-responsive" src="https://www.home.co.th/images/Developer/icon-company4-08.png" style="float: left;height: 25px;margin-right: 5px;margin-top: -5px;" alt="">ข้อมูลบริษัท</a></li>
+    
+    
+                             <li><a href="#project-contact" class="sclltotype" onclick="HDAClick('contact','','','','');clicklink('project-contact');"><img class="img-responsive" src="https://www.home.co.th/images/Developer/icon-company4-12.png" style="float: left;height: 25px;margin-right: 5px;margin-top: -5px;" alt="">สอบถามข้อมูล</a></li>
+            </ul>
+            
+        </div>
+
+				<nav class="sort" style="float: none;text-align: -webkit-center;">
+					<ul class="clearfix">
+                        
+					</ul>
+				</nav><!-- .sort -->
+			</div><!-- .wrapper-title -->
+
+			<div class="list-project">
+                    <a name="ทาวน์โฮม" style="position:absolute;margin-top: -100px;"></a>
+                    <h1 class="title tytitle" ty="ทาวน์โฮม">ทาวน์โฮม <span class="d_icon"></span></h1>
+                <div>
+              <div style="display:block" id="pl1-1" ty2="ทาวน์โฮม" class="pl1" data-brandid="2187"> 
+
+                <article class="item"  >
+					<div class="detail">
+						<h3 class="title" style="color:#FFF;">เดอะ แพสเซจ รามอินทรา-คู้บอน</h3>
+						<span class="type" style="color:#FFF;">
+                                         <img src="/Files/Images/Icon/T-3.png" alt="ทาวน์โฮม" class="iconhome" />
+ ทาวน์โฮม</span>
+					
+						<div class="place">
+							<span>ถ.คู้บอน แขวงบางชัน แขตคลองสามวา กรุงเทพฯ</span>
+						</div>
+                        <div class="place2">
+							<img alt="ทำเล" width="25" data-original="https://www.home.co.th/Images/mobi/infoicon/WArtboard28.png" style="display: inline;"><span>เยื้องแม็กซ์แวลู คู้บอน</span>
+						</div>
+                        <div class="place2">
+							<img alt="จุดเด่น" width="25" data-original="https://www.home.co.th/Images/mobi/infoicon/WArtboard28_.png" style="display: inline;"><span>ทาวน์โฮม สมาร์ท ซิตี้</span>
+						</div>
+                        <div class="place2" style="line-height: 30px;">
+							<span>ทาวน์โฮม 2 ชั้น 3 ห้องนอน 3 ห้องน้ำ 2 ที่จอดรถ บน ถ.คู้บอน ใกล้ทางด่วนและรถไฟฟ้า</span>
+						</div>
+                        
+                            <div class="place2">
+							    <img alt="ราคา" width="25" data-original="https://www.home.co.th/Images/mobi/infoicon/WArtboard28_3.png" style="display: inline;"><span>เริ่มต้น 2.99 ล้านบาท</span>
+						    </div>
+						
+						<a href="/home/i/9640-เดอะ-แพสเซจ-รามอินทรา-คู้บอน" class="btn btn_hero">ดูโครงการนี้</a>
+					</div><!-- .detail -->
+					<div class="wrapper-image">
+						<img data-original="https://www.home.co.th/images/img_v/img_Directory/20181004-144335405-The-Passage_000.jpg" alt="เดอะ แพสเซจ รามอินทรา-คู้บอน" style="height: 460px; width: 100%; object-fit: contain" />
+					</div><!-- .wrapper-image -->
+				</article>
+
+
+                <p class="row"><br /></p>
+
+              </div>
+              
+                  </div>
+
+			</div><!-- .list-project -->
+		</div>
+	</div><!-- .wrapper-all-project -->
+
+
+    <div class="navigations_scll" style="top: 0px; position: fixed; background: rgb(255, 255, 255); z-index: 1000; width: 100%; text-align: center; border-bottom: 1px solid rgb(221, 221, 221); box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px 0px, rgba(0, 0, 0, 0.19) 0px 1px 15px 0px;display:none;" >
+            <ul class="navigations" style="margin: 20px 0px 20px -35px;">
+                                                         <li><a href="#ทาวน์โฮม" class="sclltotype tysc" onclick="HDAClick('ทาวน์โฮม','','','','');clicklink('ทาวน์โฮม');"><img class="img-responsive" src="https://www.home.co.th/images/Developer/icon-company4-04.png" style="float: left;height: 25px;margin-right: 5px;margin-top: -5px;" alt="">ทาวน์โฮม</a></li>
+                                                <li><a href="#barddesc" class="sclltotype" onclick="HDAClick('company','','','','');clicklink('barddesc');"><img class="img-responsive" src="https://www.home.co.th/images/Developer/icon-company4-08.png" style="float: left;height: 25px;margin-right: 5px;margin-top: -5px;" alt="">ข้อมูลบริษัท</a></li>
+    
+    
+                             <li><a href="#project-contact" class="sclltotype" onclick="HDAClick('contact','','','','');clicklink('project-contact');"><img class="img-responsive" src="https://www.home.co.th/images/Developer/icon-company4-12.png" style="float: left;height: 25px;margin-right: 5px;margin-top: -5px;" alt="">สอบถามข้อมูล</a></li>
+            </ul>
+            
+        </div>
+
+   <a name="barddesc" style="position:absolute;margin-top: -100px;"></a>
+  <div class="wrapper-company-info">
+  	<div class="container-fluid">
+          <h1>ข้อมูลบริษัท</h1>
+  		<div class="row">
+  			<div class="col-xs-12 col-sm-6 info-left">
+                  <div class="row">
+                      <div class="col-sm-12">
+                          <img data-original="https://www.home.co.th/images/img_v/img_Developer/20180829-142736708-LOGO.jpg" alt="บริษัท เฮ้าส์ ดีเวลลอปเมนท์ จำกัด" style="height: 120px; object-fit: contain" />
+                      </div>
+                      <div class="col-sm-12">
+                          <strong><p class="company-name">บริษัท เฮ้าส์ ดีเวลลอปเมนท์ จำกัด</p></strong> 
+  			              <p class="address">333 ถ.ประดิษฐ์มนูธรรม แขวงวังทองหลาง เขตวังทองหลาง กรุงเทพฯ 10310</p>
+                      </div>
+                  </div>
+  			</div>
+  			<div class="col-xs-12 col-sm-6  info-right">
+  				<div class="wrapper-contact-info">
+  					<h4>Contact Us :</h4>
+  					<ul class="company-contact">
+                    <li style="width: 40%;">
+              	        <i class="icon web"></i>
+              	        <div class="list-contact">
+              		        <a onclick="HDAClick('sitelink','','','','');" href="http://www.thepassage-ramintra-khubon.com" target="_blank">www.thepassage-ramintra-khubon.com</a>
+              	        </div>
+                      </li> 
+
+              
+                      <li style="width: 40%;">
+              	        <i class="icon tel"></i>
+              	        <div class="list-contact">
+	              	        <a onclick="HDAClick('call','','','','');" href="tel:02-026-2161">02-026-2161</a>
+              	        </div>
+                      </li> 
+
+                      <li style="width: 40%;">
+              	        <i class="icon fax"></i>
+              	        <div class="list-contact">
+	              	        <a onclick="HDAClick('fax','','','','');" href="tel:02-514-3377">02-514-3377</a>
+	              	
+              	        </div>
+                      </li>
+
+            </ul><!-- .company-contact -->
+						<div class="action anchor-nav">
+							
+							<a href="#project-contact" class="btn btn_main-line">สอบถามข้อมูล</a>
+            </div>
+  				</div><!-- .wrapper-contact-info -->
+  			</div>
+  		</div>
+  	</div><!-- .container-fluid -->
+  </div>
+
+    <div class="wrapper-company-info">
+  	    <div class="container-fluid">
+            <h1>รายละเอียดบริษัท</h1>
+              <div class="row">
+                      <div class="col-sm-12" style="font-family: Tahoma;">
+                          ธุรกิจพัฒนาอสังหาริมทรัพย์เพื่อขาย ประกอบไปด้วย ทาวน์เฮ้าส์ บ้านเดี่ยว และคอนโดมิเนียม ซึ่งมีทำเลที่ตั้งในเขตชุมชน เมืองหรือใกล้ศูนย์กลางทางธุรกิจ สามารถเดินทางได้สะดวก และเน้นแบบบ้านที่ตรงกับความต้องการของผู้บริโภคในแต่ละกลุ่ม
+                          </div>
+                  </div>
+  	    </div>
+    </div>
+
+    
+      <a name="project-contact" style="position:absolute;margin-top: -100px;"></a>
+      <div class="project-contact">
+    <div class="container-fluid">
+      <h1 id="contact">
+          สอบถามข้อมูลเพิ่มเติม <small> นัดเยี่ยมชมโครงการ</small>
+      </h1>
+      <div class="contact_form">
+        <form id="mailcontact">
+
+            <input type="hidden" value="บริษัท เฮ้าส์ ดีเวลลอปเมนท์ จำกัด" name="developerName" />
+            <input type="hidden" value="140990" name="developerId" />
+            <input type="hidden" value="housed@house-d.co.th" name="developerMail" />
+
+          <div class="row">
+
+              <div class="col-xs-6">
+                  <div class="form-group">
+                      <label for="message-field">ข้อมูลที่ต้องการสอบถาม :</label>
+                      <textarea class="form-control" id="message-field" rows="8"></textarea>
+                  </div>
+ 
+
+                <div class="form-group">
+                  <label for="email-field">อีเมล :</label>
+                  <input type="email" class="form-control" id="email-field" placeholder="" />
+                </div>
+
+              </div>
+
+            <div class="col-xs-6">
+              <div class="form-group">
+                  <label for="fullname-field">ชื่อ - นามสกุล :</label>
+                  <input type="text" class="form-control" id="fullname-field" placeholder="" />
+              </div>
+              <div class="form-group">
+                  <label for="phone-field">เบอร์โทรศัพท์ :</label>
+                  <input type="tel" class="form-control" id="phone-field" placeholder="" />
+              </div>
+
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="email-field">กรุณากรอกตัวเลข :</label>
+                        <img src="/CaptchaImage?prefix=contact" />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="imgcode" />
+                    </div>
+                </div>
+
+                
+                <a href="javascript:void(0)" class="btn btn_main btn_submit_sent" style="padding: 15px;width: 100%;">Send</a>
+                                
+           
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div><!-- .project-contact -->
+  
+
+
+</div>
+
+
+
+
+
+
+        <div class="modal fade sentmaildata" id="sentmaildata" role="dialog" >
+                <div class="modal-dialog" style="width:335px;background: #FFF;top: 200px;">
+                    <div class="modal-body">
+                     <p class="g-recaptcha" style="padding-top: 15px;width: 304px;margin-left:auto;margin-right:auto;" data-sitekey="6LfBjWgUAAAAAN9Q1pUDzzrWXkgropJcH6gwmSTb"></p>
+                        
+                        <input id="getmailPO2_MODE" value="" type="hidden" />
+                        <input id="getmailPO2_N_IDCODE" value="" type="hidden" />
+                        <input id="getmailPO2_C_PAGE" value="" type="hidden" />
+                        <input id="getmailPO2_C_EMAIL" value="" type="hidden" />
+                        <input id="getmailPO2_C_NAME" value="" type="hidden" />
+                        <input id="getmailPO2_DATA_GROUP" value="" type="hidden" />
+                        <input id="getmailPO2_List_N_IDCODE" value="" type="hidden" />
+
+                        <a href="javascript:void(0)" class="btn btn_main getinfologin2" style="background:#F70;color: #fff;
+                            background: #F70;
+                            height: 40px;
+                            width: 100%;
+                            margin-top: 10px;
+                            width:302px;
+                            line-height: 30px;">OK</a>
+                        </div>
+                </div>
+              </div>
+        <div class="modal fade projlikedata" id="projlikedata" role="dialog" >
+                <div class="modal-dialog" style="width:335px;background: #FFF;top: 200px;border-radius: 20px;">
+                    <div class="modal-body" style="text-align:center;">
+                         <label style="font-size: 20px;">เก็บโครงการลง <img src="https://www.home.co.th/images/mobi/iconhomehand-03.png"  style="margin: 10px 12px;width:45px;"> เรียบร้อย</label>
+                        </div>
+                </div>
+              </div>
+          <!-- Modal -->
+
+        <style>
+            .loader {
+              border: 13px solid #f3f3f3;
+              border-radius: 50%;
+              border-top: 16px solid #3498db;
+              width: 100px;
+              height: 100px;
+              -webkit-animation: spin 2s linear infinite; /* Safari */
+              animation: spin 2s linear infinite;
+            }
+
+            /* Safari */
+            @-webkit-keyframes spin {
+              0% { -webkit-transform: rotate(0deg); }
+              100% { -webkit-transform: rotate(360deg); }
+            }
+
+            @keyframes spin {
+              0% { transform: rotate(0deg); }
+              100% { transform: rotate(360deg); }
+            }
+            .modal-dialog{
+                width: 150px;
+                margin: 10% auto;
+            }
+            .modalLogin .modal-dialog{
+                width: 410px!important;
+                margin: 10% auto;
+            }
+    </style>
+
+        <div class="modal fade Modalloading" data-backdrop="static" id="Modalloading" role="dialog">
+            <div class="modal-dialog" style="width: 150px;margin: 10% auto;">
+
+              <!-- Modal content-->
+              <div class="modal-content" style="background-color: transparent; border: 0;border-radius: 0;outline: 0;box-shadow: none;">
+
+                <div class="modal-body">
+                 <div class="loader"></div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        <script>
+            
+            //setTimeout(function () {
+            //    $('#Modalloading').modal('show');
+            //    //$('#Modalloading').modal('hide');
+            //    setTimeout(function () {
+            //        $('#Modalloading').modal('hide');
+            //    }, 7000);
+            //}, 1000);
+            
+  </script>
+
+  
+        <script>
+            $('.getinfologin2').click(function () {
+
+                var MailPO = {
+                    TO: '',
+                    CC: '',
+                    BCC: 'member@home.co.th',
+                    From: 'member@home.co.th',
+                    Subject: 'รับข้อมูลข่าวสาร',
+                    Message: '',
+                    ProjNoList: '',
+                    groupType: window.location.href,
+                    C_DEVICE_CODE: 'D',
+                    C_IPADD: '',
+                    TOEMAIL: '',
+                    C_GETBACK: '',
+                    userCode: '',
+                    C_NAME: '',
+                    C_DESC: '',
+                    C_TEL: '',
+                    C_COOKIE_CODE: hdaUserAccount(),
+                    C_DATA_LIST: '{"info":"' + getHomeCookie('info') + '","near":"' + getHomeCookie('infog') + '","rec":"' + getHomeCookie('inforec') + '"}'
+                }
+                if ($('#getmailPO2_MODE').val() == '1') {
+                    MailPO.TO = $('#getmailPO2_C_EMAIL').val();
+                    MailPO.ProjNoList = $('#getmailPO2_N_IDCODE').val();
+                    MailPO.groupType = $('#getmailPO2_MODE').val();
+                } else if ($('#getmailPO2_MODE').val() == '4') {
+                    MailPO.TO = $('#getmailPO2_C_EMAIL').val();
+                    MailPO.ProjNoList = $('#getmailPO2_List_N_IDCODE').val();
+                    MailPO.groupType = $('#getmailPO2_MODE').val();
+                } else if ($('#getmailPO2_MODE').val() == '5') {
+                    MailPO.TO = $('.getsetmailfav').val();
+                    MailPO.groupType = $('#getmailPO2_MODE').val();
+                    var arrfav = [];
+                    $.each($('.favlike[chk="1"]'), function (i, v) {
+                        arrfav.push($(v).attr('projno'));
+                    })
+                    MailPO.ProjNoList = $('.sentmail03').attr('projsent');
+                }
+                HDASendMail(MailPO.groupType + '|รับข้อมูลโครงการ');
+                var v = grecaptcha.getResponse();
+                if (v != '') {
+                    $('#sentmaildata').modal('toggle');
+                    $('.favlike').attr('chk', '0');
+                    $('.sentmail03').attr('projsent', '');
+                    $('.sentmail-num').html('0');
+                    $('.sentmail-noti').hide();
+                    countfavlike();
+                    $('#Modalloading').modal('show');
+                    $.getJSON('https://ipapi.co/json/', function (data) {
+                        ip = (data.ip);
+                        MailPO.C_IPADD = ip;
+                        MailPO.C_COOKIE_CODE = hdaUserAccount();
+                        MailPO.userCode = window.location.href;
+
+                        $.ajax({
+                            type: "POST",
+                            url: "/member/api/SentMailSystemAPI",
+                            data: MailPO,
+                            success: function (data2) {
+                                alert('ส่งเมล์สำเร็จ');
+                                $('#Modalloading').modal('hide');
+                            }
+                        })
+                    })
+                } else {
+                    alert('Click CAPTCHA');
+                }
+
+            })
+                </script>
+
+      <footer class="footer">
+        <div class="container-fluid">
+          <div class="wrapper-1 clearfix">
+
+            <div class="address">
+              <div class="logo">
+                <a href="https://youtu.be/GXODWAV76IU" target="_blank"><img src="https://www.home.co.th/images/icon/logo-HBG-Group-2.png" alt="" style="width: 300px;"></a>
+              </div>
+              <div class="company-name">
+                <a href="https://www.home.co.th/contactus" target="_blank" style="color:#fff;"><span>บริษัท โฮมบายเออร์ไกด์ จำกัด</span></a>
+              </div>
+              <div class="detail-address">
+                <span>1895/97-98-99 ซ.ไปรษณีย์เสนานิคม ถ.พหลโยธิน <br/>แขวงลาดยาว เขตจตุจักร กทม.10900</span>
+              </div>
+              <div class="wrapper-contact">
+                <div class="tel">
+                  <div class="wrapper-image">
+                    <img src="/images/icon-tel-footer.png" alt="" />
+                  </div>
+                  <a href="tel:029410155">02-941-0155</a><span>, </span><a href="tel:029414900">02-941-4900</a>
+                </div>
+                <div class="fax">
+                  <div class="wrapper-image">
+                    <img src="/images/icon-fax.png" alt="" />
+                  </div>
+                  <span>02-579-7437, 02-941-4900#102</span>
+                </div>
+                <div class="mail">
+                  <div class="wrapper-image">
+                    <img src="/images/icon-email.png" alt="" />
+                  </div>
+                  <a href="mailto:webmaster@home.co.th">webmaster@home.co.th</a>
+                </div>
+                  <div class="">
+                          <div class="fb-page" style="margin-top: 15px;" data-href="https://www.facebook.com/Homebuyersfanpage" data-width="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/Homebuyersfanpage" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Homebuyersfanpage">home.co.th</a></blockquote></div>
+                          </div>
+
+                    <script>
+                        (function (d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0];
+                            if (d.getElementById(id)) return;
+                            js = d.createElement(s); js.id = id;
+                            js.src = 'https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v3.1';
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));
+                    </script>
+
+                  <div style="margin-top: 7px;width: 350px;">
+                      <span>Follow us</span><br><br>
+                      <a href="https://www.facebook.com/Homebuyersfanpage/" class="facebook" target="_blank">
+                          <img style="height:30px;margin-right: 20px;" src="https://www.home.co.th/images/icon/Footter-01.png" alt="">
+                      </a>
+                      <a href="https://www.youtube.com/tvhomebuyer" class="youtube" target="_blank">
+                          <img style="height:30px;margin-right: 20px;" src="https://www.home.co.th/images/icon/Footter-02.png" alt="">
+                      </a>
+                      <a href="https://line.me/R/ti/p/%40home.co.th" class="line" target="_blank">
+                          <img style="height:30px;margin-right: 20px;" src="https://www.home.co.th/images/icon/Footter-03.png" alt="">
+                      </a>
+                      <a href="https://twitter.com/homesociety?utm_source=expo%2Bevent%2Bweb&amp;utm_campaign=15728ac53a-EMAIL_CAMPAIGN_2018_09_28_02_09&amp;utm_medium=email&amp;utm_term=0_7ab175b8de-15728ac53a-447675081" class="tw" target="_blank">
+                          <img style="height:30px;margin-right: 20px;" src="https://www.home.co.th/images/icon/Footter-04.png" alt="">
+                      </a>
+                      <a href="https://www.instagram.com/home.co.th/?hl=th&amp;utm_source=expo%2Bevent%2Bweb&amp;utm_campaign=15728ac53a-EMAIL_CAMPAIGN_2018_09_28_02_09&amp;utm_medium=email&amp;utm_term=0_7ab175b8de-15728ac53a-447675081" class="ig" target="_blank">
+                          <img style="height:30px;margin-right: 20px;" src="https://www.home.co.th/images/icon/Footter-05.png" alt="">
+                      </a>
+                          </div>
+              </div>
+            </div>
+
+            <nav class="footer-menu">
+                <div class="col-sm-6">
+                    <div class="row">
+                <div class="col-xs-6">
+                  <h4>เมนูหลัก</h4>
+                  <ul>
+                    <li><a href="/">หน้าแรก</a></li>
+                    <li><a href="/home" target="_blank">บ้านใหม่</a></li>
+                    <li><a href="/condo"  target="_blank">คอนโดใหม่</a></li>
+                    <li><a href="/review"  target="_blank">รีวิวบ้าน-คอนโด</a></li>
+                    <li><a href="/hometips/mortgage"  target="_blank">สินเชื่อ</a></li>
+                    <li><a href="/event"  target="_blank">งานอีเวนท์</a></li>
+                      <li><a href="/map/homeonmap" title="ค้นหาบ้าน-คอนโดบนแผนที่" target="_blank">ค้นหาบ้าน-คอนโดบนแผนที่</a></li>
+                  </ul>
+                </div>
+                <div class="col-xs-6">
+                  <h4>บ้านมือสอง</h4>
+                  <ul>
+                    <li><a href="/classified"  target="_blank">ขายบ้าน</a></li>
+                    <li><a href="/classified"  target="_blank">เช่าบ้าน</a></li>
+                    <li><a href="/classified"  target="_blank">ขายคอนโด</a></li>
+                    <li><a href="/classified/posting"  target="_blank">ปล่อยเช่า</a></li>
+                    <li><a href="/classified/posting"  target="_blank">ลงประกาศอื่นๆ</a></li>
+                  </ul>
+                </div>
+                        </div>
+                    <div class="row">
+                        <div><p><br /></p></div>
+                <div class="col-xs-6">
+                  <h4>คำแนะนำ</h4>
+                  <ul>
+                      <li><a href="/hometips/list/84-คำแนะนำสำหรับมือใหม่" target="_blank">คำแนะนำสำหรับมือใหม่</a></li>
+                      <li><a href="/hometips/list/85-เทคนิคกู้เงินซื้อบ้าน" target="_blank">เทคนิคกู้ซื้อบ้าน</a></li>
+                      <li><a href="/hometips/decoration/list/92-แต่งบ้านแต่งคอนโดฯ" target="_blank">แต่งบ้านแต่งคอนโด</a></li>
+                      <li><a href="/hometips/decoration/list/94-ฮวงจุ้ย" target="_blank">ฮวงจุ้ย</a></li>
+                      <li><a href="/hometips/list/96-ข่าวรถไฟฟ้าและสาธารณูปโภค" target="_blank">ข่าวรถไฟฟ้าและสาธารณูปโภค</a></li>
+                      <li><a href="/hometips/list/99-ข่าวดังในกระแส" target="_blank">ข่าวดังในกระแส</a></li>
+                  </ul>
+                </div>
+                <div class="col-xs-6">
+                  <h4>ติดต่อ</h4>
+                  <ul>
+                    <li><a href="/contactus/ads" target="_blank">ลงโฆษณาบนเว็บไซต์</a></li>
+                    <li><a href="/contactus/vdo" target="_blank">ลงโฆษณา Vdo Content</a></li>
+                    <li><a href="/contactus" target="_blank">ติดต่อเรา/เกี่ยวกับเรา</a></li>
+                    <li><a href="/member" target="_blank">สมัครสมาชิก</a></li>
+                  </ul>
+                  <nav class="other">
+                  </nav>
+                </div>
+                        </div>
+                </div>
+             <div class="col-sm-6">
+                    <div class="row">
+                         <h4>Developer</h4>
+                         <ul>
+            <li><a href="https://developer.home.co.th" target="_blank" style="font-weight: bold;color: #FFF;">
+                <span class="glyphicon glyphicon-home" aria-hidden="true"></span> เข้าสู่ระบบ/สมาชิกบริษัท</a>
+            </li>
+                             </ul>
+             
+              <div class="row col-sm-6">
+                 <ul class="developerlink1">
+             <li dev="10041"><a href="https://www.home.co.th/d/allinspire" target="_blank" title="Allinspire (ออลล์ อินสไปร์)">Allinspire (ออลล์ อินสไปร์)</a></li>
+             <li dev="19226"><a href="https://www.home.co.th/d/ananda" target="_blank" title="Ananda (อนันดา)">Ananda (อนันดา)</a></li>
+             <li dev="4861"><a href="https://www.home.co.th/d/AP" target="_blank" title="AP (Thailand) (เอพี)">AP (Thailand) (เอพี)</a></li>
+             <li dev="11515"><a href="https://www.home.co.th/d/aqestate" target="_blank" title="AQ Estate (เอคิว เอสเตท)">AQ Estate (เอคิว เอสเตท)</a></li>
+             <li dev="7959"><a href="https://www.home.co.th/d/areeya" target="_blank" title="Areeya (อารียา)">Areeya (อารียา)</a></li>
+             <li dev="21003"><a href="https://www.home.co.th/d/bagroup" target="_blank" title="Bagroup (เบล็ส แอสเสท)">Bagroup (เบล็ส แอสเสท)</a></li>
+             <li dev="13223"><a href="https://www.home.co.th/d/charnissara" target="_blank" title="Charn Issara (ชาญอิสระ)">Charn Issara (ชาญอิสระ)</a></li>
+             <li dev="139514"><a href="https://www.home.co.th/d/chewathai" target="_blank" title="Chewathai (ชีวาทัย)">Chewathai (ชีวาทัย)</a></li>
+             <li dev="9905"><a href="https://www.home.co.th/d/cmcgroup" target="_blank" title="CMC (เจ้าพระยามหานคร)">CMC (เจ้าพระยามหานคร)</a></li>
+             <li dev="138707"><a href="https://www.home.co.th/d/cpland" target="_blank" title="CP Land (ซี.พี.แลนด์)">CP Land (ซี.พี.แลนด์)</a></li>
+             <li dev="138654"><a href="https://www.home.co.th/d/thecube" target="_blank" title="Cube Real (เดอะคิวบ์)">Cube Real (เดอะคิวบ์)</a></li>
+             <li dev="9100"><a href="https://www.home.co.th/d/goldenland" target="_blank" title="Golden Land (แผ่นดินทอง)">Golden Land (แผ่นดินทอง)</a></li>
+             <li dev="134919"><a href="https://www.home.co.th/d/jsp" target="_blank" title="J.S.P (เจ.เอส.พี)">J.S.P (เจ.เอส.พี)</a></li>
+             <li dev="8861"><a href="https://www.home.co.th/d/landandhouses" target="_blank" title="Land and Houses (แลนด์ แอนด์ เฮ้าส์)">Land and Houses</a></li>
+             <li dev="12971"><a href="https://www.home.co.th/d/lpn" target="_blank" title="L.P.N. (แอล.พี.เอ็น.)">L.P.N. (แอล.พี.เอ็น.)</a></li>
+             <li dev="10085"><a href="https://www.home.co.th/d/lalinproperty" target="_blank" title="Lalin Property (ลลิล)">Lalin Property (ลลิล)</a></li>
+             <li dev="2730"><a href="https://www.home.co.th/d/MK" target="_blank" title="MK (มั่นคงเคหะการ)">MK (มั่นคงเคหะการ)</a></li>
+
+            </ul>
+                     </div>
+             <div class="col-sm-6">
+                 <ul class="developerlink1">
+             <li dev="6840"><a href="https://www.home.co.th/d/NChousing" target="_blank" title="NC Housing (เอ็น.ซี.)">NC Housing (เอ็น.ซี.)</a></li>
+             <li dev="15444"><a href="https://www.home.co.th/d/origin" target="_blank" title="Origin (ออริจิ้น)">Origin (ออริจิ้น)</a></li>
+             <li dev="1818"><a href="https://www.home.co.th/d/pieamsuk" target="_blank" title="Pieamsuk (เปี่ยมสุข)">Pieamsuk (เปี่ยมสุข)</a></li>
+             <li dev="818"><a href="https://www.home.co.th/d/PF" target="_blank" title="Property Perfect">Property Perfect</a></li>
+             <li dev="11066"><a href="https://www.home.co.th/d/pruksarealestate" target="_blank" title="Pruksa (พฤกษา)">Pruksa (พฤกษา)</a></li>
+             <li dev="10461"><a href="https://www.home.co.th/d/QH" target="_blank" title="Q House (ควอลิตี้)">Q House (ควอลิตี้)</a></li>
+             <li dev="9496"><a href="https://www.home.co.th/d/raimonland" target="_blank" title="Raimon Land">Raimon Land</a></li>
+             <li dev="1451"><a href="https://www.home.co.th/d/rasika" target="_blank" title="Rasika (รสิกา)">Rasika (รสิกา)</a></li>
+             <li dev="2895"><a href="https://www.home.co.th/d/sansiri" target="_blank" title="Sansiri (แสนสิริ)">Sansiri (แสนสิริ)</a></li>
+             <li dev="5618"><a href="https://www.home.co.th/d/sc" target="_blank" title="SC Asset (เอสซี)">SC Asset (เอสซี)</a></li>
+             <li dev="779"><a href="https://www.home.co.th/d/Senadevelopment" target="_blank" title="Sena Development">Sena Development</a></li>
+             <li dev="4159"><a href="https://www.home.co.th/d/supalai" target="_blank" title="Supalai (ศุภาลัย)">Supalai (ศุภาลัย)</a></li>
+             <li dev="2840"><a href="https://www.home.co.th/d/Tararomenterprise" target="_blank" title="Tararom Enterprise">Tararom Enterprise</a></li>
+             <li dev="11935"><a href="https://www.home.co.th/d/tararomestate" target="_blank" title="Tararom Estate">Tararom Estate</a></li>
+             <li dev="12297"><a href="https://www.home.co.th/d/Thanasiri" target="_blank" title="Thanasiri Group">Thanasiri Group</a></li>
+             <li dev="1205"><a href="https://www.home.co.th/d/VillaKunalai" target="_blank" title="Villa Kunalai">Villa Kunalai</a></li>
+            <li><a href="/d/showall"><strong style="color:#FFF">ดูบริษัททั้งหมด</strong></a></li>
+             </ul>
+                </div>
+                    </div>
+                </div>
+            </nav>
+
+          </div>
+          <div class="wrapper-2 clearfix">
+
+
+
+                  <div class="address" style="margin-top:-10px;width: 100%;">
+                      
+                      
+                      <div class="address" style="margin-top: 0px;">
+                        <h5 style="color:#FFF;">Home.co.th
+                            <span style="font-size: 12px;color:#d0daff;font-weight: 300;">แอพช่วยคุณค้นหาบ้าน-คอนโดฯ พร้อมให้ดาวน์โหลดแล้ว</span>
+                        </h5>
+
+                        <img src="/images/logo-app.png" style="height: 44px;" alt="">
+                        <a href="https://itunes.apple.com/th/app/homebuyers/id500472643?mt=8" target="_blank"><img style="height: 45px;" src="https://www.home.co.th/images/mobi/logo-load-app-ios.png" alt=""></a>
+                        <a href="https://play.google.com/store/apps/details?id=com.homebuyersguide.Program" target="_blank"><img style="height: 45px;" src="https://www.home.co.th/images/mobi/logo-load-app-android.png" alt=""></a>
+                    </div>
+                     
+                      <div class="col-sm-4" style="margin-top: 25px;">
+                                <div class="logo" style="float:left;margin-top: 8px;">
+                                  <a href="/tv" title="www.home.co.th" target="_blank">
+                                      <img src="https://www.home.co.th/images/icon/Footter-06.png" height="50" alt="tv">
+                                  </a>
+                              </div>
+                          <div style="float:left;margin: 5px;">
+                              <p style="font-size: 14px;margin-bottom: 5px!important;">ชมคลิปโครงการบ้าน-คอนโดฯ</p>
+                              <h4 style="margin-top: 1px!important;">มากสุดในประเทศไทย</h4>
+                          </div>
+                          </div>
+
+                      <div class="col-sm-4" style="margin-top: 25px;">
+                                <div class="logo" style="float:left;margin-top: 8px;margin-right: 8px;">
+                                  <a href="https://dashboard.home.co.th/" title="www.home.co.th" target="_blank">
+                                      <img src="https://www.home.co.th/Files/Images/Logo-Home-Dashboard-OK-03.png" height="50" alt="tv">
+                                  </a>
+                              </div>
+                          <div style="margin: 5px;">
+                              <p style="font-size: 15px;margin-bottom: 5px!important;line-height: 19px;">ระบบประเมินประสิทธิภาพและวัดค่าความนิยมโครงการอสังหาริมทรัพย์ในเว็บไซด์</p>
+                              
+                          </div>
+                          </div>
+                  </div>
+
+                  
+
+
+
+
+              
+              
+          </div>
+
+          <div class="copyright" style="margin-top: 20px;">
+            <p>Copyright © 2016 Home Buyers Guide | <a href="/Privacy" target="_blank" style="color:#FFF;">Privacy Policy</a> | <a href="/Terms" target="_blank" style="color:#FFF;">Terms of Use</a></p>
+          </div>
+        </div>
+      </footer>
+	
+    </div><!-- .wrapper-desktop -->
+   
+    
+    <script src="https://www.home.co.th/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://www.home.co.th/bower_components/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="https://www.home.co.th/bower_components/javascript-auto-complete/auto-complete.min.js"></script>
+    <script src="https://www.home.co.th/bower_components/nstSlider/dist/jquery.nstSlider.min.js"async></script>
+    <script src="https://www.home.co.th/js/royalslider/jquery.royalslider.min.js"></script>
+    <script src="https://www.home.co.th/js/function.min.js"></script>
+    <script src="https://www.home.co.th/js/owlcarousel/owl.carousel.min.js"></script>
+    <script src="https://www.home.co.th/js/jquery.matchHeight-min.js"async></script>
+    <script src="https://www.home.co.th/js/masonry.pkgd.min.js"></script>
+    <script src="https://www.home.co.th/js/jquery.magnific-popup.min.js"></script>
+    <script src="https://www.home.co.th/js/scroll-smooth.min.js"async></script>
+    <script src="https://www.home.co.th/js/google-map.min.js"></script>
+    <script src="https://www.home.co.th/member/scripts/login3rdparty.min.js" async></script>
+    <script src="https://www.home.co.th/js/hightlight.min.js"async></script>
+    <script src="https://www.home.co.th/js/script.min.js"></script>
+    <script src="https://www.home.co.th/js/home-scripts.min.js"></script>
+      <script src="/global/Scripts/global-function.min.js"></script>
+
+
+
+
+<script> (function (i, s, o, g, r, a, m) {
+     i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+         (i[r].q = i[r].q || []).push(arguments)
+     }, i[r].l = 1 * new Date(); a = s.createElement(o),
+     m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+ })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-29155927-1', 'www.home.co.th');
+    ga('set', 'contentGroup1', 'บริษัท เฮ้าส์ ดีเวลลอปเมนท์ จำกัด');
+    ga('set', 'contentGroup2', 'บริษัท เฮ้าส์ ดีเวลลอปเมนท์ จำกัด');
+    ga('set', 'contentGroup3', 'company profile');
+    var loginstate = "False"
+    if (loginstate == "True") {
+        ga('set', 'dimension1', '');
+    }
+    ga('send', 'pageview');
+</script>
+    
+<script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 975701913;
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    var google_conversion_language = "en";
+    var google_conversion_format = "3";
+    var google_conversion_color = "ffffff";
+    var google_conversion_label = "Nl-xCO7V5F4QmY-g0QM";
+    /* ]]> */
+</script>
+
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+<noscript>
+<div style="display:none;">
+    <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/975701913/?value=0&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+<!-- facebook -->
+
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=361756525910";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<!-- google plus ---- -->
+<script type="text/javascript">
+    (function () {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/platform.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+</script>
+
+<!-- Facebook Pixel Code -->
+<script>
+    !function (f, b, e, v, n, t, s) {
+        if (f.fbq) return; n = f.fbq = function () {
+            n.callMethod ?
+            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        }; if (!f._fbq) f._fbq = n;
+        n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+        t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+    }(window,
+    document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '172619223442029')
+    fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=135788193425739&ev=PageView&noscript=1"
+/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet" />
+    <script src="/js/jquery.lazyload.min.js"></script>
+    <script>
+
+        $(function () {
+
+            $("img").lazyload();
+
+        })
+        </script>
+    <script>
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 600) {
+                $('.navigations_scll').fadeIn('slow');
+            } else {
+                $('.navigations_scll').fadeOut('slow');
+            }
+        })
+</script>
+
+    
+    <script>
+        var clicklink = function (t) {
+            $('html, body').animate({
+                scrollTop: $('a[name="'+t+'"]').offset().top
+            }, 500);
+        }
+
+
+        $(function () {
+
+            $('.branddefault').click(function () {
+                $('.d_icon').html('');
+                $('[id^="pl"]').hide().fadeIn();
+                $('#passproject').show();
+                $('.tytitle').show();
+                $('.tysc').show();
+            });
+
+            $('.bandlistitem').on("click", ".brandselect", function () {
+                //$('.shownextpro').hide();
+                var x = $(this).attr("data-value");
+                var y = $('a[data-value="'+x+'"]').attr('data-imguri');
+                console.log(x, y);
+                $('.d_icon').html('<img src="' + y + '" style="height: 35px;">');
+                $('[id^="pl"],#passproject').hide();
+                $("div[data-brandid=" + x + "]").fadeIn();
+                $('.tytitle').hide();
+                //$('.tysc').hide();
+                $.each($('[id^="pl"],#passproject'), function (i, v) {
+                    if ($(v).css('display') == 'block') {
+                        $('h1[ty="' + $(v).attr('ty2') + '"]').show();
+                        //$('a[onclick="clicklink(\'' + $(v).attr('ty2') + '\')"]').show();
+                    }
+                })
+            });
+
+            //$('.shownextpro').click(function () {
+            //    $(this).parent().hide();
+            //    var divx = $(this).attr("data-val");
+            //    $('[id^="' + divx + '"]').fadeIn().next().fadeIn();
+            //});
+            $('.shownextpro').click(function () {
+                $(this).hide();
+                //$(this).parent().hide();
+                var divx = $(this).attr("data-val");
+                $('[id^="' + divx + '"]').fadeIn().next().fadeIn();
+                //$('.' + divx).fadeIn(1000)
+            });
+
+            $('.sclltotype').click(function (e) {
+                e.preventDefault();
+                var name = $(this).attr('href').substr(1);
+                var pos = $('a[name=' + name + ']').offset();
+                $('body').animate({ scrollTop: pos.top - 100 }, '4000');
+               
+            });
+
+            //$(".bandlistitem").owlCarousel({
+            //    margin: 10,
+            //    loop: true,
+            //    navText:"  ",
+            //    autoWidth: true,
+            //});
+            $(".bandlistitem").slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 4,
+                //centerMode: true,
+                variableWidth: true
+            });
+            $(".contentDev2").slick({
+                infinite: true,
+                speed: 300,
+                slidesToShow: 4,
+                slidesToScroll: 1
+            });
+            
+
+
+
+            $('.btn_submit_sent').click(function () {
+                    //$('#send-mail-developer').show();
+                    //e.preventDefault();
+                    var curUrl = window.location.href;
+                    var d = new Date();
+                    
+
+                    var name = false;
+                    var phone = false;
+                    var mail = false;
+                    var msg = false;
+                    var checkcode = false;
+
+
+
+                    if ($('#fullname-field').val().length <= 0) {
+                        $('#fullname-field').removeClass("has-success").addClass("has-error");
+                        name = false;
+                    } else {
+                        $('#fullname-field').removeClass("has-error").addClass("has-success");
+                        name = true;
+                    }
+
+                    if ($('#phone-field').val().length <= 0) {
+                        $('#phone-field').removeClass("has-success").addClass("has-error");
+                        phone = false;
+                    } else {
+                        $('#phone-field').removeClass("has-error").addClass("has-success");
+                        phone = true;
+                    }
+
+                    if ($('#email-field').val().length <= 0) {
+                        $('#email-field').removeClass("has-success").addClass("has-error");
+                        mail = false;
+                    } else {
+                        $('#email-field').removeClass("has-error").addClass("has-success");
+                        mail = true;
+                    }
+
+                    if ($('#message-field').val().length <= 0) {
+                        $('#message-field').removeClass("has-success").addClass("has-error");
+                        msg = false;
+                    } else {
+                        $('#message-field').removeClass("has-error").addClass("has-success");
+                        msg = true;
+                    }
+
+                    if (name == true && phone == true && mail == true && msg == true) {
+                        if ($('#imgcode').val().length <= 0) {
+                            $('#imgcode').removeClass("has-success").addClass("has-error");
+                            $('.statusmail').html('<p class="text-danger">กรุณากรอกข้อมูลให้ครบถ้วน...</p>');
+
+                        } else {
+                            $('#imgcode').removeClass("has-error").addClass("has-success");
+                            $('#send-mail-developer').html('กำลังส่งข้อมูล...');
+                            var urlchecl = "/CaptchaImage/check?prefix=contact&code=" + $('#imgcode').val();
+
+                            $.get(urlchecl, function (obj) {
+                                if (obj == "false") {
+                                    $('#imgcode').removeClass("has-success").addClass("has-error");
+                                    $('.statusmail').html('<p class="text-danger">กรุณากรอกข้อมูลให้ครบถ้วน...</p>');
+                                } else {
+
+                                    var putObj = {
+
+                                        MemberId: $('input[name="memberid"').val(),
+                                        Message: $('#message-field').val(),
+                                        DeveloperId: $('input[name="developerId"').val(),
+                                        Email: $('#email-field').val(),
+                                        Phone: $('#phone-field').val()
+
+                                    }
+
+                                    //$.ajax({
+                                    //    url: '/member/api/inboxapi',
+                                    //    type: 'PUT',
+                                    //    data: putObj,
+                                    //    success: function (data) {
+
+                                    //    }
+                                    //});
+                                    var getmailPO2 = {
+                                        MODE: '1',
+                                        N_IDCODE: $('input[name="developerId"').val(),
+                                        C_PAGE: window.location.href,
+                                        C_EMAIL: $('#email-field').val(),
+                                        C_NAME: $('#fullname-field').val(),
+                                        DATA_GROUP: '3',
+                                        C_DESC: $('#message-field').val(),
+                                        C_TEL: $('#phone-field').val(),
+                                        C_DEVICE_CODE: $('#DEVICE_CODE').val(),
+                                        C_COOKIE_CODE: $('#hdack').val()
+                                    }
+                                    //$.ajax({
+                                    //    type: "POST",
+                                    //    url: "/member/api/AddEmailAPI",
+                                    //    data: getmailPO2,
+                                    //    success: function (data2) {
+                                    //        if (data2 == 1) {
+
+                                    //        } else {
+                                    //            alert('error');
+                                    //        }
+                                    //    }
+                                    //})
+                                    var MailPO2 = {
+                                        TO: $('#email-field').val(),
+                                        CC: '',
+                                        BCC: 'member@home.co.th',
+                                        From: 'member@home.co.th',
+                                        Subject: '',
+                                        Message: window.location.href + '|บริษัท เฮ้าส์ ดีเวลลอปเมนท์ จำกัด|' + $('#fullname-field').val() + '|' + $('#phone-field').val() + '|' + $('#message-field').val() + '|' + 'https://www.home.co.th/images/img_v/img_Developer/20180829-142736708-LOGO.jpg' + '',
+                                ProjNoList: '140990',
+                                        groupType: window.location.href,
+                                        C_DEVICE_CODE: 'D',
+                                        C_IPADD: '',
+                                        TOEMAIL: $('input[name="developerMail"]').val(),
+                                        C_GETBACK: '',
+                                        userCode: '',
+                                        C_NAME: $('#fullname-field').val(),
+                                        C_DESC: $('#message-field').val(),
+                                        C_TEL: $('#phone-field').val(),
+                                        //C_COOKIE_CODE: gethdaCookie("hdaUser"),
+                                        C_COOKIE_CODE: '',
+                                        C_DATA_LIST: '{"info":"' + getHomeCookie('info') + '","near":"' + getHomeCookie('infog') + '","rec":"' + getHomeCookie('inforec') + '"}'
+                                    }
+
+                                    HDAClick('inquiry', '', '', '3', '');
+                                    HDASendMail('3|สอบถามข้อมูลบริษัท|' +
+                                   $('#email-field').val() + '|' +
+                                   $('#phone-field').val() + '|' +
+                                   $('#fullname-field').val() + '|' +
+                                   $('#message-field').val()
+                                   ); $('#Modalloading').modal('show');
+                                    $.getJSON('https://ipapi.co/json/', function (data) {
+                                        ip = (data.ip);
+                                        MailPO2.C_IPADD = ip;
+                                        MailPO2.userCode = window.location.href;
+                                        MailPO2.C_COOKIE_CODE = hdaUserAccount();
+                                        $.ajax({
+                                            type: "POST",
+                                            url: "/member/api/SentMailSystemForDevAPI",
+                                            data: MailPO2,
+                                            success: function (data2) {
+                                                console.log(data2);
+                                                alert('ส่งเมล์สำเร็จ'); $('#Modalloading').modal('hide');
+                                                location.reload();
+                                            }
+                                        })
+                                    })
+                                }
+                            });
+                        }
+
+                    } else {
+                        $('#send-mail-developer').show();
+                        $('.statusmail').html('<p class="text-danger">กรุณากรอกข้อมูลให้ครบถ้วน...</p>');
+                    }
+
+
+                });
+
+
+            });
+
+
+
+    </script>
+
+
+ <script>
+     $.get('/api/DeveloperUrlAPI', function (d) {
+         $.each(d.ReturnData, function (i, v) {
+             $('.developerlink1 > li[dev="' + v.DeveloperID + '"] > a').attr('href', 'https://www.home.co.th/d/' + v.URLRewrite);
+         })
+     })
+
+     $('.second-menu > li > a').mouseover(function () {
+         $(this).addClass('focus');
+     })
+     $('.second-menu > li > a').mouseout(function () {
+         $(this).removeClass('focus');
+     })
+     var getinformatio2 = function (e) {
+
+     }
+     var getinformatio = function (e) {
+
+     }
+ </script>
+
+<script>
+    var addFav = function (i) {
+        if (i == 0) {
+            $("#modalLogin").modal();
+            $('a[onclick="addFav(' + i + ')"]').removeClass();
+            $('a[onclick="addFav(' + i + ')"]').addClass('btn btn_hero btn_bookmark');
+            setTimeout(function () {
+                $('a[onclick="addFav(' + i + ')"]').removeClass();
+                $('a[onclick="addFav(' + i + ')"]').addClass('btn btn_hero btn_bookmark');
+            }, 1000)
+        }
+    }
+    </script>
+
+
+
+
+
+<input type="hidden" id="callmailccdata" value="" />
+<input type="hidden" id="DEVICE_CODE" value="D" />
+<script>
+    $(function () {
+        $('#coverpage').modal();
+        $('#coverpage').on("click", function (e) {
+            $('#coverpage').modal('hide');
+        });
+
+        var locationmapdiv = $(".location-map");
+        var offset = locationmapdiv.offset();
+        if (offset != undefined) {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 250) {
+                    $('#scrollTop').fadeIn('slow');
+                    if ($(this).scrollTop() >= offset.top - 600 && $(this).scrollTop() <= offset.top + 300) {
+                        $('#scrollTop2').fadeOut('slow');
+                    } else {
+                        $('#scrollTop2').fadeIn('slow');
+                    }
+                } else {
+                    $('#scrollTop').fadeOut('slow'); $('#scrollTop2').fadeOut('slow');
+                }
+            });
+            $('#scrollTop').click(function (e) { e.preventDefault(); $('html, body').animate({ scrollTop: 0 }, 800); });
+        } else {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 250) {
+                    $('#scrollTop').fadeIn('slow'); $('#scrollTop2').fadeIn('slow');
+                } else {
+                    $('#scrollTop').fadeOut('slow'); $('#scrollTop2').fadeOut('slow');
+                }
+            });
+            $('#scrollTop').click(function (e) { e.preventDefault(); $('html, body').animate({ scrollTop: 0 }, 800); });
+        }
+
+
+    });
+ </script>
+
+
+
+
+ <script>
+     $.ajax({
+         type: "GET",
+         url: "/member/api/AddEmailAPI",
+         success: function (data3) {
+             ////console.log(data3);
+             $('.getinformationname').val(data3.C_NAME);
+             $('.getinformationemail').val(data3.C_EMAIL);
+             $('#email-field').val(data3.C_EMAIL);
+             $('#fullname-field').val(data3.C_NAME);
+             $('.getmaillogin').val(data3.C_EMAIL);
+             if (data3.C_EMAIL != '') {
+                 $('.getinfologin').removeAttr('disabled');
+                 $('.getinformation').removeAttr('disabled');
+                 $('#callmailccdata').val(data3.C_EMAIL);
+             }
+         }
+     })
+</script>
+
+
+  
+            <!--+++++++++++++++++++++    area str ++++++++++++++++++++++++--> 
+<style>
+    #scrollTop2 {
+        bottom:120px!important;
+    }
+    #scrollTop3 {
+        bottom:28%!important;
+    }
+    .shprojlist .shprojlist div,.shprojlist .shprojlist2 div {
+        padding: 0!important;
+    }
+    #projfavcook .projnext, #projfavcook .projfavi,#projfavcook .projrec, #projfavcook .sha01, #projfavcook .shl01 {
+        padding: 5px 0px 0px 0px;
+    }
+    #projfavcook .shlist {
+        font-size: 15px;
+    }
+    #scrollTop5 #projfavcook .projnext2, #scrollTop5 #projfavcook .projfavi2,#scrollTop5 #projfavcook .projrec2 {
+        line-height: 1px;
+    }
+    .favlike img:nth-child(1) {
+        display:none;
+    }
+    .favlike img:nth-child(2) {
+        display:block;
+    }
+    .favlike img:nth-child(3) {
+        display:none;
+    }
+    .favlike[chkb="1"] img:nth-child(1) {
+        display:block!important;
+    }
+    .favlike[chk="1"] img:nth-child(2) {
+        display:none!important;
+    }
+    .favlike[chk="1"] img:nth-child(3) {
+        display:block!important;
+    }
+    .sentmail03 {
+        background:#627ad1;width: 45px;height: 45px;border-radius: 50px;margin:10px 0px -15px 5px;position:relative;display: inline-block;
+    }
+    .sentmail03[styleopen="1"] {
+        position:absolute;width: 90%;left: 0;
+    }
+    .sentmail03[styleopen="1"] img{
+        float :left ;
+    }
+    .sha01 label {
+        color:#FFF!important;
+    }
+    #btnwish div[onclick="closemanu(5)"], #btnwish div[onclick="closemanu(6)"], #btnwish div[onclick="closemanu(7)"], #btnwish div[onclick="closemanu(8)"], #btnwish div[onclick="closemanu(12)"] {
+        background:rgb(255, 127, 14)!important;
+    }
+
+</style>
+<div id="scrollTop4" style="display:none; font-size: 30px; position: fixed; right: 11px; bottom: 60px; line-height: 40px; color: rgb(78, 100, 183); background: rgb(37, 73, 127); z-index: 100; width: 50px; height: 50px; box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px; overflow: hidden; border-radius: 50%;cursor: pointer;" title="โครงการที่คุณอาจสนใจ">
+        <img src="https://www.home.co.th/images/mobi/iconhomehand-03.png" style="width: 50px;height:50px;float: left;">
+    <img src="https://www.home.co.th/images/mobi/iconhomehand-03_close.png" class="closefav" style="display:none; position: fixed; width: 50px; height: 50px; right: 11px; margin-top: 0px; ">
+    </div>
+<div id="scrollTop5" style="z-index:1000!important; border-radius: 10px;font-size: 30px; position: fixed; right: 11px; bottom: -600px; line-height: 40px; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); z-index: 100; width: 500px; height: auto; box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;cursor: pointer;">
+        <div class="modal-header" style="border-bottom: none;padding: 0px;">
+          
+          
+        </div>
+        <div class="modal-body" style="padding: 20px 12px 0px 12px;">
+          <form action="?" method="POST">    
+            
+            <div id="projfavcook" style="color:#4e64b7;max-height: 400px;overflow-x: hidden;overflow-y: scroll;">
+                <div class="shprojlist"></div>
+                <div class="shprojlist3"></div>
+                <div class="shprojlist2"></div>
+                <div class="shlist"></div>
+            </div>
+              <div style="text-align: -webkit-center;" id="btnwish">
+              <div class="projnext3" onclick="closemanu(1)" style="background:#627ad1;width: 45px;height: 45px;border-radius: 50%;margin: 10px 5px 10px 5px;display:none;"><img src="https://www.home.co.th/images/icon/house1.png" style="margin: 10px 12px;"></div>
+              <div class="projrec3" onclick="closemanu(12)" style="background:#627ad1;width: 45px;height: 45px;border-radius: 50%;margin: 10px 5px 10px 5px;display:none;"><img src="https://www.home.co.th/images/icon/house2.png" style="margin: 10px 12px;"></div>
+              <div class="projfavi3" onclick="closemanu(2)" style="background:#627ad1;width: 45px;height: 45px;border-radius: 50%;margin: 10px 5px 10px 5px;display:none;"><img src="https://www.home.co.th/images/icon/locations-30.png" style="width: 25px;"></div>
+              
+              <div class="sha03" onclick="closemanu(3)" style="background:#627ad1;width: 45px;height: 45px;border-radius: 50%;margin: 10px 5px 10px 5px;display:none;"><img src="https://www.home.co.th/images/icon/house3.png" style="margin: 10px 12px;"></div>
+              <div class="shl03" onclick="closemanu(4)" style="background:#627ad1;width: 45px;height: 45px;border-radius: 50%;margin: 10px 5px 10px 5px;display:none;"><img src="https://www.home.co.th/images/icon/house4.png" style="margin: 10px 14.5px;"></div>
+
+              <div class="sentmail03" projsent="0" styleopen="0"><img onclick="closemanu(10)" src="https://www.home.co.th/images/icon/mailpop.png" style="margin: 9px 14.5px 8px 8.5px;height: 28px;display: inline-block;">
+                  <div class="sentmail-noti" style="position: absolute;width: 20px;height: 20px;border-radius: 50%;background: rgb(215, 57, 56);line-height: 0;text-align: center;top: -5px;display:none;">
+                    <span class="sentmail-num" style="color: #fff;line-height: 20px;font-size: 14px;">0</span>
+                  </div>
+                  <div class="modal-bodysetmailfav" style="float: left;padding: 0px;display:none;">
+                            <input class="getsetmailfav" style="border: 1px solid #959595;border-radius: 5px;padding-left: 15px;padding-right: 15px;font-size: 1.6rem;height:32px;color:#777;width: 320px;" type="email" disabled="" placeholder="คลิกเลือกโครงการรับข้อมูล" onkeyup="getinformatio(this)">
+                            <a href="javascript:void(0)" class="btn btn_main getsetfav" style="background:#627ad1;margin-top:5px;">OK</a>
+                        </div>
+             </div>
+                  </div>
+            </form>
+        </div>
+    </div>
+
+      <!--+++++++++++++++++++++    area str ++++++++++++++++++++++++-->
+      <script>
+          if (getprojCookie() != '' || getprojgCookie() != '' || getprojrecCookie() != '0') {
+              $('#scrollTop4').show();
+          }
+          function scrollTotop(element) {
+              element.animate({ bottom: '130px' });
+          }
+          function scrollTodown(element) {
+              element.animate({ bottom: '-600px' });
+          }
+
+          $('#scrollTop4').click(function () {
+              if ($('#scrollTop5').attr('class') == 'closereviewproj5') {
+                  scrollTodown($('#scrollTop5'));
+                  $('#scrollTop5').removeClass('closereviewproj5');
+                  $('.closefav').hide();
+              } else {
+                  scrollTotop($('#scrollTop5'));
+                  $('#scrollTop5').addClass('closereviewproj5');
+                  $('.closefav').show();
+                  HDAClick('act-btn-recc', '', '', '', '');
+              }
+          })
+      </script>
+            <script>
+                ////console.log({ a: '', s: '' });
+                $.post("/member/api/CookAreaAPI", { a: '', s: '' }, function (d, s) {
+                    ////console.log(d);
+                    $.get("/review/api/ShAreaAPI", d, function (d, s) {
+                        ////console.log(d);
+                        var htmltxt = "";
+                        var htmltxt1 = "";
+                        var htmltxt2 = "";
+                        if (d != null) {
+
+                            $.each(d.subarea, function (i, v) {
+                                htmltxt1 += '<tr style="border-bottom: #ddd 1px solid;"><td style="width: 50%;">' + v.SubAreaName + '</td><td>';
+                                if (v.homecount > 0) {
+                                    htmltxt1 += '<a href="/home/' + v.aurl + '/' + v.surl + '" target="_blank" ><img src="https://www.home.co.th/Images/Icon/icon-12-30.png" style="width: 25px;" alt="บ้านเดี่ยว">' + v.homecount + '</a>';
+                                }
+                                htmltxt1 += '</td><td>';
+                                if (v.condocount > 0) {
+                                    htmltxt1 += '<a href="/condo/' + v.aurl + '/' + v.surl + '" target="_blank" ><img src="https://www.home.co.th/Images/Icon/icon-13-30.png" style="width: 25px;" alt="คอนโดมิเนียม">' + v.condocount + '</a>';
+                                }
+
+                                htmltxt1 += '</td></tr>';
+                            })
+                            $.each(d.landmark, function (i, v) {
+                                htmltxt2 += '<div style="float: left;padding: 0;"><a  href="/l/' + v.PoiUrl_Keyword + '" target="_blank"  style="margin-right: 5px;line-height: 35px;color: #4e64b7;font-size: 1.4rem;background: rgba(78,100,183,.1);padding: 5px 10px;">' + v.PoiUrl_Keyword.replace(/-/g, '') + '</a></div>';
+                            })
+                            htmltxt2 += '<div style="float: left;padding: 0;width: 100%;"></div>';
+                            $.each(d.tag, function (i, v) {
+                                htmltxt2 += '<div style="float: left;padding: 0;"><a  href="' + v.PoiUrl_Keyword + '" target="_blank"  style="margin-right: 5px;line-height: 35px;color: #4e64b7;font-size: 1.4rem;padding: 5px 10px;border-radius: 60px;border: solid 1px #BBB;">' + v.PoiName.replace(/-/g, '') + '</a></div>';
+                            })
+                            if (d.area != null) {
+                                htmltxt += '<div class="sha01" onclick="closemanu(3)"><label style="width: 70%;line-height: 20px;font-weight: 300;">โครงการ' + (d.area.AreaNo >= 31 && d.area.AreaNo <= 36 ? '' : 'ย่าน') + ' ' + d.area.AreaName + '</label></div>';
+                                htmltxt += '<table class="sha02" style="margin-left: 20px;width: 100%;line-height: 40px;overflow: hidden;display:none;">'
+                                htmltxt += htmltxt1 + '</table>';
+                                htmltxt += '<div class="shl01" onclick="closemanu(4)">โครงการใกล้ Landmark-Tag</div><div class="shl02" style="display:none;">'
+                                htmltxt += htmltxt2 + '</div>';
+                            }
+                        }
+                        $('.shlist').html(htmltxt);
+                    })
+                });
+              </script>
+      <script>
+          var projcookN = '';
+          $.get('/api/ProjectAPI', { "Proj": getprojCookie().toString() }, function (d, s) {
+              if (d != null && d.length > 0) {
+                  var txthtml = '<div class="projnext" onclick="closemanu(1)">โครงการที่ดูล่าสุด</div><div class="projnext2" style="background: #fff;display:none;">';
+
+                  var favproj = (d[0].MapFileName == null ? '' : d[0].MapFileName);
+                  $.each(d, function (i, v) {
+                      //console.log(v);
+                      if (i == 0) {
+                          projcookN = v.ProjName;
+                      }
+                      var projtypeicon = '';
+                      switch (v.ProjectType) {
+                          case 'บ้านเดี่ยว': projtypeicon2 = 'https://www.home.co.th/images/icon/HomePin.png'; break;
+                          case 'ทาวน์โฮม': projtypeicon2 = 'https://www.home.co.th/images/icon/TownhomePin.png'; break;
+                          case 'บ้านแฝด': projtypeicon2 = 'https://www.home.co.th/images/icon/HometwinPin.png'; break;
+                          case 'คอนโดมิเนียม': projtypeicon2 = 'https://www.home.co.th/images/icon/CondoPin.png'; break;
+                          case 'โฮมออฟฟิศ': projtypeicon2 = 'https://www.home.co.th/images/icon/OfficePin.png'; break;
+                          default: break;
+                      }
+                      var projtypeicon01 = (v.ProjGroup == 'คอนโด' ? 'condo' : 'home');
+                      txthtml += '<article class="item clearfix">' +
+                                      '<div class="image-thumbnail" style="float: left;margin-right: 20px;">' +
+                                          '<a href="/' + projtypeicon01 + '/i/' + v.ProjNo + '">' +
+                                              '<img alt="' + v.ProjName + '" style="width: 115px;height: 70px;object-fit: contain;display: inline;" src="https://www.home.co.th/' + v.Thumb_IMG + '">' +
+                                          '</a>' +
+                                          '</div>' +
+                                          '<span style="display: grid;">' +
+                                          '<h2 class="title" style="color: #333;font-size: 1.4rem;font-weight: 300;line-height: 1.6;margin-top: 0;margin-bottom: 0px;">' +
+                                          '<a href="/' + projtypeicon01 + '/i/' + v.ProjNo + '">' + v.ProjName + ' </a>' +
+                                      '</h2>' +
+                                      '<h2 class="title" style="color: #333;font-size: 1.3rem;font-weight: 300;line-height: 1;margin-top: 0;margin-bottom: 5px;padding-bottom: 5px;border-bottom: solid 0.5px #AAA;">' +
+                                          '' + (v.Marketing_Keyword.length > 40 ? v.Marketing_Keyword.substring(0, 40) + '...' : v.Marketing_Keyword) + '' +
+                                      '</h2>' +
+                                      '<h2 class="title" style="color: #333;font-size: 1.3rem;font-weight: 300;line-height: 1;margin-top: 0;">' +
+                                          '' + (v.HighlightInfo.length > 80 ? v.HighlightInfo.substring(0, 80) + '...' : v.HighlightInfo) + '' +
+                                      '</h2>' +
+                                      '<span class="date" style="font-size: 14px;color: #337ab7;font-weight: bold;margin-top: 5px;"><img src="' + projtypeicon2 + '" style="    width: 25px;margin-top: -10px;margin-right: 10px;" />' + v.PriceTxt +
+                                      '<div class="favlike" chk="0" chkb="0" onclick="favlike(this);" projno="' + v.ProjNo + '" style="width: 20px;height: 20px;position: absolute;z-index: 2;border-radius: 50%;margin: -20px 20px 0 5px;right: 0;">' +
+                                      '<img src="https://www.home.co.th/images/icon/Withlist.png" alt="" style="height: 25px;margin-top: -10px;margin-left: -50px;">' +
+                                      '<img src="https://www.home.co.th/images/icon/close-envelope_close.png" alt="" style="width: 25px;margin-left: -10px;position: absolute;top: 1px;">' +
+                                      '<img src="https://www.home.co.th/images/icon/close-envelope.png" alt="" style="width: 25px;margin-left: -10px;position: absolute;top: 1px;"></div>' +
+                                      '</span>' +
+                                      '</span>' +
+                                  '</article>';
+
+                      favproj = favproj.replace(v.ProjNo + ',', '').replace(v.ProjNo, '');
+                      $('.shprojlist').html(txthtml + '</div>');
+                  })
+
+
+              }
+          })
+
+          if (getprojrecCookie() != '' && getprojrecCookie() != '0') {
+              var txthtml3 = '<div class="projrec shchk" onclick="closemanu(12)">โครงการที่คุณอาจสนใจ</div><div class="projrec2" style="background: #fff;">';
+              $.get('/api/ProjectAPI', { "Proj": getprojrecCookie().toString() }, function (d1, s1) {
+                  $.each(d1, function (i2, v2) {
+
+                      var projtypeicon2 = '';
+                      switch (v2.ProjectType) {
+                          case 'บ้านเดี่ยว': projtypeicon2 = 'https://www.home.co.th/images/icon/HomePin.png'; break;
+                          case 'ทาวน์โฮม': projtypeicon2 = 'https://www.home.co.th/images/icon/TownhomePin.png'; break;
+                          case 'บ้านแฝด': projtypeicon2 = 'https://www.home.co.th/images/icon/HometwinPin.png'; break;
+                          case 'คอนโดมิเนียม': projtypeicon2 = 'https://www.home.co.th/images/icon/CondoPin.png'; break;
+                          case 'โฮมออฟฟิศ': projtypeicon2 = 'https://www.home.co.th/images/icon/OfficePin.png'; break;
+                          default: break;
+                      }
+                      var projtypeicon02 = (v2.ProjGroup == 'คอนโด' ? 'condo' : 'home');
+                      txthtml3 += '<article class="item clearfix">' +
+                                      '<div class="image-thumbnail" style="float: left;margin-right: 20px;">' +
+                                          '<a href="/' + projtypeicon02 + '/i/' + v2.ProjNo + '">' +
+                                              '<img alt="' + v2.ProjName + '" style="width: 115px;height: 70px;object-fit: contain;display: inline;" src="https://www.home.co.th/' + v2.Thumb_IMG + '">' +
+                                          '</a>' +
+                                          '</div>' +
+                                          '<span style="display: grid;">' +
+                                          '<h2 class="title" style="color: #333;font-size: 1.4rem;font-weight: 300;line-height: 1.6;margin-top: 0;margin-bottom: 0px;">' +
+                                          '<a href="/' + projtypeicon02 + '/i/' + v2.ProjNo + '">' + v2.ProjName + ' </a>' +
+                                      '</h2>' +
+                                      '<h2 class="title" style="color: #333;font-size: 1.3rem;font-weight: 300;line-height: 1;margin-top: 0;margin-bottom: 5px;padding-bottom: 5px;border-bottom: solid 0.5px #AAA;">' +
+                                           '' + (v2.Marketing_Keyword.length > 40 ? v2.Marketing_Keyword.substring(0, 40) + '...' : v2.Marketing_Keyword) + '' +
+                                      '</h2>' +
+                                      '<h2 class="title" style="color: #333;font-size: 1.3rem;font-weight: 300;line-height: 1;margin-top: 0;">' +
+                                          '' + (v2.HighlightInfo.length > 80 ? v2.HighlightInfo.substring(0, 80) + '...' : v2.HighlightInfo) + '' +
+                                      '</h2>' +
+                                      '<span class="date" style="font-size: 14px;color: #337ab7;font-weight: bold;margin-top: 5px;"><img src="' + projtypeicon2 + '" style="    width: 25px;margin-top: -10px;margin-right: 10px;" />' + v2.PriceTxt +
+                                      '<div class="favlike" chk="0" chkb="0" onclick="favlike(this);" projno="' + v2.ProjNo + '" style="width: 20px;height: 20px;position: absolute;z-index: 2;border-radius: 50%;margin: -20px 20px 0 5px;right: 0;">' +
+                                      '<img src="https://www.home.co.th/images/icon/Withlist.png" alt="" style="height: 25px;margin-top: -10px;margin-left: -50px;">' +
+                                      '<img src="https://www.home.co.th/images/icon/close-envelope_close.png" alt="" style="width: 25px;margin-left: -10px;position: absolute;top: 1px;">' +
+                                      '<img src="https://www.home.co.th/images/icon/close-envelope.png" alt="" style="width: 25px;margin-left: -10px;position: absolute;top: 1px;"></div>' +
+                                      '</span>' +
+                                      '</span>' +
+                                  '</article>';
+                  })
+                  $('.shprojlist3').html(txthtml3 + '</div>');
+              })
+
+          }
+
+          if (getprojgCookie() != '') {
+              setTimeout(function () { $('.projfavi').html('โครงการใกล้ ' + projcookN); }, 2000);
+              //console.log(projcookN);
+              var txthtml2 = '<div class="projfavi" onclick="closemanu(2)">โครงการใกล้ ' + projcookN + '</div><div class="projfavi2" style="background: #fff;display:none;">';
+              $.get('/api/ProjectAPI', { "Proj": getprojgCookie().toString() }, function (d1, s1) {
+                  $.each(d1, function (i2, v2) {
+
+                      var projtypeicon2 = '';
+                      switch (v2.ProjectType) {
+                          case 'บ้านเดี่ยว': projtypeicon2 = 'https://www.home.co.th/images/icon/HomePin.png'; break;
+                          case 'ทาวน์โฮม': projtypeicon2 = 'https://www.home.co.th/images/icon/TownhomePin.png'; break;
+                          case 'บ้านแฝด': projtypeicon2 = 'https://www.home.co.th/images/icon/HometwinPin.png'; break;
+                          case 'คอนโดมิเนียม': projtypeicon2 = 'https://www.home.co.th/images/icon/CondoPin.png'; break;
+                          case 'โฮมออฟฟิศ': projtypeicon2 = 'https://www.home.co.th/images/icon/OfficePin.png'; break;
+                          default: break;
+                      }
+                      var projtypeicon02 = (v2.ProjGroup == 'คอนโด' ? 'condo' : 'home');
+                      txthtml2 += '<article class="item clearfix">' +
+                                      '<div class="image-thumbnail" style="float: left;margin-right: 20px;">' +
+                                          '<a href="/' + projtypeicon02 + '/i/' + v2.ProjNo + '">' +
+                                              '<img alt="' + v2.ProjName + '" style="width: 115px;height: 70px;object-fit: contain;display: inline;" src="https://www.home.co.th/' + v2.Thumb_IMG + '">' +
+                                          '</a>' +
+                                          '</div>' +
+                                          '<span style="display: grid;">' +
+                                          '<h2 class="title" style="color: #333;font-size: 1.4rem;font-weight: 300;line-height: 1.6;margin-top: 0;margin-bottom: 0px;">' +
+                                          '<a href="/' + projtypeicon02 + '/i/' + v2.ProjNo + '">' + v2.ProjName + ' </a>' +
+                                      '</h2>' +
+                                      '<h2 class="title" style="color: #333;font-size: 1.3rem;font-weight: 300;line-height: 1;margin-top: 0;margin-bottom: 5px;padding-bottom: 5px;border-bottom: solid 0.5px #AAA;">' +
+                                           '' + (v2.Marketing_Keyword.length > 40 ? v2.Marketing_Keyword.substring(0, 40) + '...' : v2.Marketing_Keyword) + '' +
+                                      '</h2>' +
+                                      '<h2 class="title" style="color: #333;font-size: 1.3rem;font-weight: 300;line-height: 1;margin-top: 0;">' +
+                                          '' + (v2.HighlightInfo.length > 80 ? v2.HighlightInfo.substring(0, 80) + '...' : v2.HighlightInfo) + '' +
+                                      '</h2>' +
+                                      '<span class="date" style="font-size: 14px;color: #337ab7;font-weight: bold;margin-top: 5px;"><img src="' + projtypeicon2 + '" style="    width: 25px;margin-top: -10px;margin-right: 10px;" />' + v2.PriceTxt + '' +
+                                      '<div class="favlike" chk="0" chkb="0" onclick="favlike(this);" projno="' + v2.ProjNo + '" style="width: 20px;height: 20px;position: absolute;z-index: 2;border-radius: 50%;margin: -20px 20px 0 5px;right: 0;">' +
+                                      '<img src="https://www.home.co.th/images/icon/Withlist.png" alt="" style="height: 25px;margin-top: -10px;margin-left: -50px;">' +
+                                      '<img src="https://www.home.co.th/images/icon/close-envelope_close.png" alt="" style="width: 25px;margin-left: -10px;position: absolute;top: 1px;">' +
+                                      '<img src="https://www.home.co.th/images/icon/close-envelope.png" alt="" style="width: 25px;margin-left: -10px;position: absolute;top: 1px;"></div>' +
+                                      '</span>' +
+                                      '</span>' +
+                                  '</article>';
+                  })
+                  $('.shprojlist2').html(txthtml2 + '</div>');
+              })
+
+          }
+
+
+          if (getprojfCookie() != '') {
+              $.each(getprojfCookie().split(','), function (i, v) {
+                  $('article[data-prono="' + v + '"]').addClass('bookmark');
+                  setTimeout(function () {
+                      //$.each($('.favlike'), function (i, v) {
+                      //    //console.log(v,i);
+                      //})
+                      $('.favlike[projno="' + v + '"]').attr('chkb', '1');
+                  }, 3000);
+
+              })
+          }
+                </script>
+
+
+      <!--projnext projfavi sha01 shl01-->
+  
+
+<div id="scrollTop" style="font-size:30px; position:fixed;  right:20px; bottom:20px; display:none"><a href="javascript:;"><span class="glyphicon glyphicon-menu-up" style="color:#333;"></span></a> </div> 
+	
+    <!--++++++++++++++ HDA Start ++++++++++++++++++++++++++++++++++++-->
+      <input type="hidden" id="hdack" value="">
+    <script type="text/javascript" src="/Scripts/hda-script-v4.min.js"></script>
+
+    <script type="text/javascript" >
+        var objLogs = {
+            sID: 18,
+            mtID: 1801,
+            parameterValues: escapeSpecChar(''),
+            hdaModel: 3,
+            hdaID: '140990',
+            hdaName: 'Developer',
+            hdaLocation: '',
+            hdaPrj: '',
+            hdaDev: '',
+            hdaPrice: '',
+            hdaType: 'Info',
+            hdaDesc: escapeSpecChar('บริษัท เฮ้าส์ ดีเวลลอปเมนท์ จำกัด'),
+            ProcMode: 1
+        };
+    </script>
+    <script type="text/javascript">
+        
+        var getusernameHDA = function () {
+
+            var data = ('') != '' ? ('') : '';
+            return data
+        }
+         var HDAobjLogs = {};
+         if (typeof (objLogs) !== 'undefined') {
+             var objUser = {
+                 userCode: hdaUserAccount(),
+                 userType: 'CK',
+                 userName: '',
+                 requestedDevice: 'D'
+             };
+             HDAobjLogs = $.extend(objLogs, objUser);
+             hdaPostData(HDAobjLogs);
+             $('#hdack').val(HDAobjLogs.userCode);
+         }
+         var HDAClick = function (t, n, l, m, d) {
+
+             if (t != '' && t != null) { HDAobjLogs['hdaType'] = t; }
+             if (n != '' && n != null) { HDAobjLogs['hdaName'] = n; }
+             if (l != '' && l != null) { HDAobjLogs['hdaLocation'] = l; }
+             if (m != '' && m != null) { HDAobjLogs['hdaModel'] = m; }
+             if (d != '' && d != null) { HDAobjLogs['hdaDesc'] = escapeSpecChar(d); }
+             HDAobjLogs['userName'] = getusernameHDA();
+             hdaPostData(HDAobjLogs);
+         }
+         var HDAClickPage = function (m, n, t, d) {
+
+             if (m != '' && m != null) { HDAobjLogs['mtID'] = m; }
+             if (n != '' && n != null) { HDAobjLogs['hdaName'] = n; }
+             if (t != '' && t != null) { HDAobjLogs['hdaType'] = t; }
+             if (d != '' && d != null) { HDAobjLogs['hdaDesc'] = escapeSpecChar(d); }
+             HDAobjLogs['userName'] = getusernameHDA();
+             ////console.log(HDAobjLogs);
+             hdaPostData(HDAobjLogs);
+         }
+         var HDASendMail = function (p) {
+             HDAobjLogs['hdaType'] = 'sendmail';
+             if (p != '' && p != null) { HDAobjLogs['parameterValues'] = escapeSpecChar(p); }
+             HDAobjLogs['userName'] = getusernameHDA();
+             ////console.log(HDAobjLogs);
+             hdaPostData(HDAobjLogs);
+         }
+         var HDAClickPage = function (m, n, t, d) {
+
+             if (m != '' && m != null) { HDAobjLogs['mtID'] = m; }
+             if (n != '' && n != null) { HDAobjLogs['hdaName'] = n; }
+             if (t != '' && t != null) { HDAobjLogs['hdaType'] = t; }
+             if (d != '' && d != null) { HDAobjLogs['hdaDesc'] = escapeSpecChar(d); }
+             HDAobjLogs['userName'] = getusernameHDA();
+             hdaPostData(HDAobjLogs);
+         }
+         $('#home_price').click(function () {
+             HDAClick('mort-cal', '', '', '', 'ราคาบ้าน');
+         })
+         $('#down_payment').click(function () {
+             HDAClick('mort-cal', '', '', '', 'เงินดาวน์|บาท');
+         })
+         $('#down_payment_percentage').click(function () {
+             HDAClick('mort-cal', '', '', '', 'เงินดาวน์|ร้อยละ');
+         })
+         $('#nloan,#interest_rate').click(function () {
+             HDAClick('mort-cal', '', '', '', 'อัตราดอกเบี้ย');
+         })
+         $('#loan_term').click(function () {
+             HDAClick('mort-cal', '', '', '', 'ระยะเวลากู้|ร้อยละ');
+         })
+         
+
+    </script>
+    <!--+++++++++++++++++++++    HDA End ++++++++++++++++++++++++-->
+    <script>
+        function adssys(id, url, page) {
+            $.getJSON('https://ipapi.co/json/', function (data) {
+                ip = (data.ip);
+                $.post('/adssystem/api/AdsLogAPI', { C_Word: id, RequestedSource: 'D', RequestedIP: ip, UserAgent: HDAobjLogs.userCode, C_Pagename: page }, function (data) {
+                    if (data == '' || data == null) {
+                        //console.log(data);
+                    }
+                });
+            });
+
+
+        }
+
+
+        $.each($('a[href*="/adssystem/UpdateClicks/"]'), function (i, v) {
+            var AdsSys = ($(v).attr("href").replace('/adssystem/UpdateClicks/', ''));
+            $.get('/adssystem/api/AdsLogAPI', { C_Word: AdsSys }, function (data) {
+                var path2 = '/d/housedeevelopment';
+                var path3 = 'd';
+                var C_PAGE_NAME = data.C_PAGE_NAME;
+                C_PAGE_NAME = (path3 == 'review' ? 'V9_REVIEW' : C_PAGE_NAME);
+                C_PAGE_NAME = (path2 == '/home' ? 'V9_HOME' : C_PAGE_NAME);
+                C_PAGE_NAME = (path2 == '/condo' ? 'V9_CONDO' : C_PAGE_NAME);
+                C_PAGE_NAME = (path3 == 'hometips' ? 'V8_HOMETIPS' : C_PAGE_NAME);
+                C_PAGE_NAME = (path3 == 'tv' ? 'V9_TV' : C_PAGE_NAME);
+                $(v).attr("href", "javascript:void(0);");
+                $(v).attr("onclick", "adssys(" + AdsSys + ",0,'" + C_PAGE_NAME + "');window.open('" + data.C_LINKADDRESS + "');");
+            });
+        })
+    </script>
+      
+
+
+          <input type="hidden" id="Amode" value="0" />
+          <input type="hidden" id="Aid" value="0" />
+          <input type="hidden" id="afav" />
+          <input type="hidden" id="sfav" />
+    
+    <script>
+
+
+        setTimeout(function () {
+            var projnext = $(".projnext").attr('onclick');
+            var projfavi = $(".projfavi").attr('onclick');
+            var projrec = $(".projrec").attr('onclick');
+            var sha01 = $(".sha01").attr('onclick');
+            var shl01 = $(".shl01").attr('onclick');
+
+            if (projnext != undefined && projnext != "" && projnext != null) {
+                $(".projnext3").css('display', 'inline-block');
+            } else {
+                $('.sentmail03').hide();
+            }
+            if (projfavi != undefined && projfavi != "" && projfavi != null) {
+                $(".projfavi3").css('display', 'inline-block');
+            } else {
+                $('.sentmail03').hide();
+            }
+            if (projrec != undefined && projrec != "" && projrec != null) {
+                $(".projrec3").css('display', 'inline-block');
+            } else {
+                $('.sentmail03').hide();
+            }
+            if (sha01 != undefined && sha01 != "" && sha01 != null) {
+                $(".sha03").css('display', 'inline-block');
+            }
+            //console.log(projnext, projfavi, sha01, shl01);
+            if (shl01 != undefined && shl01 != "" && shl01 != null) {
+                $(".shl03").css('display', 'inline-block');
+            }
+
+        }, 3000);
+        setTimeout(function () {
+            var projnext = $(".projnext").attr('onclick');
+            var projfavi = $(".projfavi").attr('onclick');
+            var projrec = $(".projrec").attr('onclick');
+            var sha01 = $(".sha01").attr('onclick');
+            var shl01 = $(".shl01").attr('onclick');
+
+            if (projnext != undefined && projnext != "" && projnext != null) {
+                $(".projnext3").css('display', 'inline-block');
+            } else {
+                $('.sentmail03').hide();
+            }
+            if (projfavi != undefined && projfavi != "" && projfavi != null) {
+                $(".projfavi3").css('display', 'inline-block');
+            } else {
+                $('.sentmail03').hide();
+            }
+            if (projrec != undefined && projrec != "" && projrec != null) {
+                $(".projrec3").css('display', 'inline-block');
+            } else {
+                $('.sentmail03').hide();
+            }
+            if (sha01 != undefined && sha01 != "" && sha01 != null) {
+                $(".sha03").css('display', 'inline-block');
+            }
+            //console.log(projnext, projfavi, sha01, shl01);
+            if (shl01 != undefined && shl01 != "" && shl01 != null) {
+                $(".shl03").css('display', 'inline-block');
+            }
+
+        }, 5000);
+        setTimeout(function () {
+            var projnext = $(".projnext").attr('onclick');
+            var projfavi = $(".projfavi").attr('onclick');
+            var projrec = $(".projrec").attr('onclick');
+            var sha01 = $(".sha01").attr('onclick');
+            var shl01 = $(".shl01").attr('onclick');
+
+            if (projnext != undefined && projnext != "" && projnext != null) {
+                $(".projnext3").css('display', 'inline-block');
+            } else {
+                $('.sentmail03').hide();
+            }
+            if (projfavi != undefined && projfavi != "" && projfavi != null) {
+                $(".projfavi3").css('display', 'inline-block');
+            } else {
+                $('.sentmail03').hide();
+            }
+            if (projrec != undefined && projrec != "" && projrec != null) {
+                $(".projrec3").css('display', 'inline-block');
+            } else {
+                $('.sentmail03').hide();
+            }
+            if (sha01 != undefined && sha01 != "" && sha01 != null) {
+                $(".sha03").css('display', 'inline-block');
+            }
+            //console.log(projnext, projfavi, sha01, shl01);
+            if (shl01 != undefined && shl01 != "" && shl01 != null) {
+                $(".shl03").css('display', 'inline-block');
+            }
+
+        }, 7000);
+
+        var favlike = function (e) {
+            var chk = $(e).attr('chk');
+            var proglike = $(e).attr('projno');
+            if (chk == 1) {
+                $('.favlike[projno="' + proglike + '"]').attr('chk', '0');
+                countfavlike();
+            }
+            else if (chk == 0) {
+                $('.favlike[projno="' + proglike + '"]').attr('chk', '1');
+                countfavlike();
+            }
+
+        }
+        var countfavlike = function () {
+            var dataNo = '0';
+            $.each($('.favlike[chk="1"]'), function (i, v) {
+                dataNo = dataNo.replace($(v).attr('projno') + ',', '');
+                dataNo = $(v).attr('projno') + ',' + dataNo;
+            })
+            var datanoti = (dataNo.split(',').length - 1);
+            $('.sentmail-num').html(datanoti);
+            if (datanoti > 0) {
+                $('.sentmail-noti').show();
+                $('.sentmail03').attr('projsent', dataNo.replace(',0', ''));
+                //$('.sentmail03 img').attr('onclick', 'closemanu(10)');
+                $('.getsetmailfav').prop("disabled", false);
+                $('.getsetmailfav').attr('placeholder', 'ใส่อีเมลรับข้อมูลโครงการ');
+                $('.getsetmailfav').val('');
+            } else {
+                $('.sentmail-noti').hide();
+                $('.sentmail03').attr('projsent', '0');
+                //$('.sentmail03 img').attr('onclick', 'closemanu(12)');
+                $(".getsetmailfav").prop("disabled", true);
+                $('.getsetmailfav').attr('placeholder', 'คลิกเลือกโครงการรับข้อมูล');
+                $('.getsetmailfav').val('');
+
+            }
+        }
+        $('.sentmail-noti').click(function () {
+            $('.sentmail03 img').click();
+        })
+
+        $('.getsetfav').click(function (e) {
+            //var v = grecaptcha.getResponse();
+            var t = $('.getsetmailfav').val().split('@');
+            var tt = t.length;
+            var tt2 = $('.getsetmailfav').val().split('.').length;
+            if (tt > 1) {
+                if ($('.getsetmailfav').val() != '' && tt > 1 && tt2 > 1 && t[0] != '' && t[1] != '') {
+                    //$('#sentmaildatainfo').modal('toggle');
+                    $//('#modalLogin2').modal('hide');
+                    $('#getmailPO2_MODE').val('5');
+                    $('.getsetmailfav').css('border', 'solid 1px red');
+                    $('#sentmaildata').modal();
+
+                    grecaptcha.reset();
+                }
+            }
+
+        })
+
+        var closemanu = function (n) {
+            if (n != 10 && n != 11) {
+                $(".projnext,.projnext3").attr('onclick', 'closemanu(1)');
+                $(".projfavi,.projfavi3").attr('onclick', 'closemanu(2)');
+                $(".projrec,.projrec3").attr('onclick', 'closemanu(9)');
+                $(".sha01,.sha03").attr('onclick', 'closemanu(3)');
+                $(".shl01,.shl03").attr('onclick', 'closemanu(4)');
+                $(".shchk").removeClass("shchk");
+            }
+
+            if (n == 11) {
+                $('.modal-bodysetmailfav').hide();
+            }
+            if (n == 10) {
+                $('.modal-bodysetmailfav').show();
+            }
+
+
+            switch (n) {
+                case 1: $('.projnext2').show(1000); $('.projfavi2').hide(1000); $('.projrec2').hide(1000); $('.sha02').hide(1000); $('.shl02').hide(1000); $(".projnext").addClass("shchk"); $('#projfavcook').scrollTop(0); break;
+                case 2: $('.projnext2').hide(1000); $('.projfavi2').show(1000); $('.projrec2').hide(1000); $('.sha02').hide(1000); $('.shl02').hide(1000); $(".projfavi").addClass("shchk"); $('#projfavcook').scrollTop(94); break;
+                case 3: $('.projnext2').hide(1000); $('.projfavi2').hide(1000); $('.projrec2').hide(1000); $('.sha02').show(1000); $('.shl02').hide(1000); $(".sha01").addClass("shchk"); $('#projfavcook').scrollTop(141); break;
+                case 4: $('.projnext2').hide(1000); $('.projfavi2').hide(1000); $('.projrec2').hide(1000); $('.sha02').hide(1000); $('.shl02').show(1000); $(".shl01").addClass("shchk"); $('#projfavcook').scrollTop(188); break;
+                case 9: $('.projnext2').hide(1000); $('.projfavi2').hide(1000); $('.projrec2').show(1000); $('.sha02').hide(1000); $('.shl02').hide(1000); $(".projrec").addClass("shchk"); $('#projfavcook').scrollTop(47); break;
+
+                case 10: break;
+                case 11: break;
+
+                default: $('.projnext2').hide(1000); $('.projfavi2').hide(1000); $('.projrec2').hide(1000); $('.sha02').hide(1000); $('.shl02').hide(1000); break;
+            }
+            switch (n) {
+                case 1: $(".projnext,.projnext3").attr('onclick', 'closemanu(5)'); HDAClick('recc-info', '', '', '', ''); break;
+                case 2: $(".projfavi,.projfavi3").attr('onclick', 'closemanu(6)'); HDAClick('recc-near', '', '', '', ''); break;
+                case 3: $(".sha01,.sha03").attr('onclick', 'closemanu(7)'); HDAClick('recc-area', '', '', '', ''); break;
+                case 4: $(".shl01,.shl03").attr('onclick', 'closemanu(8)'); HDAClick('recc-landmark', '', '', '', ''); break;
+                case 5: $(".projnext,.projnext3").attr('onclick', 'closemanu(1)'); break;
+                case 6: $(".projfavi,.projfavi3").attr('onclick', 'closemanu(2)'); break;
+                case 7: $(".sha01,.sha03").attr('onclick', 'closemanu(3)'); break;
+                case 8: $(".shl01,.shl03").attr('onclick', 'closemanu(4)'); break;
+                case 9: $(".projrec,.projrec3").attr('onclick', 'closemanu(12)'); HDAClick('recc-recommend', '', '', '', ''); break;
+                case 10:
+                    $('.sentmail03 img').attr('onclick', 'closemanu(11)');
+                    $('.sentmail03').attr('styleopen', '1');
+                    HDAClick('recc-mail', '', '', '', '');
+                    $('.sentmail03 img').attr('src', 'https://www.home.co.th/images/icon/mailpop_close.png');
+                    $('.sentmail03 img').css('height', '22px');
+                    break;
+                case 11:
+                    $('.sentmail03 img').attr('onclick', 'closemanu(10)');
+                    $('.sentmail03').attr('styleopen', '0');
+                    $('.sentmail03 img').attr('src', 'https://www.home.co.th/images/icon/mailpop.png');
+                    $('.sentmail03 img').css('height', '28px');
+                    break;
+                case 12: $(".projrec,.projrec3").attr('onclick', 'closemanu(9)'); break;
+                default: break;
+            }
+        }
+      </script>
+    <!--+++++++++++++++++++++    area End ++++++++++++++++++++++++-->
+
+  </body>
+</html>
+
+    

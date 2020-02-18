@@ -1,0 +1,792 @@
+(function() {
+var cfg=[{"domain-name":["sainsburys.co.uk","gol.js-devops.co.uk","smg.com"],"configuration":{"time-before-offer":60,"time-offer-displayed":30,"time-offer-hidden":60,"wait-time-from-window-load":1,"time-before-next-offer-from-no":5184000,"time-before-next-offer-from-yes":5184000,"time-before-next-offer-from-non-offer":86400,"convert-to-purchaser-urls":["https://www.sainsburys.co.uk/shop/MyTrolleyCheckout","https://www.sainsburys.co.uk/webapp/wcs/stores/servlet/OrderBillingView","https://www.sainsburys.co.uk/webapp/wcs/stores/servlet/OrderCheck"],"disable-invite-urls":[],"offer-count":10}}];
+
+function findSubDomain(e, t) {
+return e.substring(e.length - t.length) === t;
+}
+function cookiesEnabled() {
+try {
+document.cookie = "cookietest=1";
+var e = -1 != document.cookie.indexOf("cookietest=");
+return document.cookie = "cookietest=1; expires=Thu, 01-Jan-1970 00:00:01 GMT", 
+e;
+} catch (e) {
+return !1;
+}
+}
+function setDomainConfiguration() {
+try {
+for (var e = 0; e < cfg.length; e++) for (var t = cfg[e], s = 0; s < t["domain-name"].length; s++) if ("*" == t["domain-name"][s] || findSubDomain(location.hostname, t["domain-name"][s])) return (cfg = t.configuration).domain = "*" == t["domain-name"][s] ? location.hostname : t["domain-name"][s], 
+!0;
+return !(cfg = {});
+} catch (e) {
+LogEtrackEvents("setDomainConfiguration JS error ", e.message, "Error");
+}
+}
+setDomainConfiguration() && cookiesEnabled() || (cfg["etrack-disabled"] = !0), window.addEventListener("beforeunload", function(e) {
+status.pageViewData = status.pageViewData + 1, status.pageClicks = 0, status.callEvent = 1;
+}, !0);
+var url = location.href;
+if (document.body.addEventListener("click", function() {
+try {
+0 < cfg.targetConditions.length && (status.pageClicks = status.pageClicks + 1, status.sessionClicks = status.sessionClicks + 1, 
+status.callEvent = 2, url !== location.href && (status.pageViewData = status.pageViewData + 1, 
+status.pageClicks = 0), url = location.href, process());
+} catch (e) {
+LogEtrackEvents("Click Event JS error", e.message, "Error");
+}
+}), window.addEventListener("keydown", function(e) {
+switch (e.keyCode) {
+case 13:
+url !== location.href && 0 < cfg.targetConditions.length && (status.pageViewData = status.pageViewData + 1, 
+status.pageClicks = 0, status.callEvent = 2, process());
+}
+url = location.href;
+}, !1), !0 !== cfg["etrack-disabled"]) {
+try {
+for (var scripts = document.getElementsByTagName("script"), j = 0, feedbackTab; j < scripts.length; j++) if (scripts[j].src && 0 <= scripts[j].src.toLowerCase().indexOf("api.smg.com/etrack/sdk/")) {
+var parts = scripts[j].src.split("/");
+cfg.apiConsumerIdentifier = parts[parts.length - 2], cfg.projectId = parts[parts.length - 1], 
+cfg.serverAddress = parts[0] + "//" + parts[2] + "/" + parts[3] + "/";
+break;
+}
+cfg.timeBeforeOffer = cfg["time-before-offer"], cfg.timeOfferDisplayed = cfg["time-offer-displayed"], 
+cfg.timeOfferHidden = cfg["time-offer-hidden"], cfg.waitTimeFromWindowLoad = cfg["wait-time-from-window-load"], 
+cfg.timeBeforeNextOfferFromNo = cfg["time-before-next-offer-from-no"], cfg.timeBeforeNextOfferFromYes = cfg["time-before-next-offer-from-yes"], 
+cfg.timeBeforeNextOfferFromNonOffer = cfg["time-before-next-offer-from-non-offer"], 
+cfg.convertToPurchaserUrls = cfg["convert-to-purchaser-urls"], cfg.OfferCountConfiguration = cfg["offer-count"] || 0, 
+cfg.disableInviteUrls = cfg["disable-invite-urls"], cfg.zIndex = cfg["z-index"], 
+cfg.invitationOfferDisabled = null != cfg["invitation-offer-disabled"] && cfg["invitation-offer-disabled"], 
+cfg.logLevel = cfg["log-level"] || "None", cfg.suppressMobileOnly = cfg["suppress-mobile-only"] || [], 
+cfg.targetConditions = cfg["target-conditions"] || [], cfg.ClientPopupOverride = null != cfg["client-popup-override"] && cfg["client-popup-override"], 
+cfg.ClientPopupTimer = cfg["client-popup-timer"] || 30;
+} catch (e) {
+LogEtrackEvents("setup config error ", e.message, "Error");
+}
+try {
+var status = {
+_persistent: [],
+_persistentCookieName: "_etr_p_",
+_session: [],
+_sessionCookieName: "_etr_s_",
+_ensureData: function() {
+var e;
+if (0 === status._persistent.length) {
+e = status._getCookie(status._persistentCookieName);
+var t, s = status._getCookie("_etr_ft_vi_");
+s && s.length && 10 === s.length && (t = s), null == e ? (status._persistent = [ t || Math.random().toString(36).substr(2, 10), "0", "", "", "0" ], 
+status._savePersistent()) : status._persistent = e.split("~");
+}
+if (0 === status._session.length) if (null == (e = status._getCookie(status._sessionCookieName))) status._session = [ "", "0", "", "", "0", "0", "0", "0", "" ], 
+status._saveSession(); else if (status._session = e.split("~"), status._session.length < 8) {
+for (var i = 0; i <= 8; i++) status._session.add("0");
+status._saveSession();
+}
+},
+_getCookie: function(e) {
+for (var t = null, s = document.cookie.split(";"), i = 0; i < s.length; i++) {
+var a = s[i].trim().split("=");
+if (a[0] === e + cfg.domain) return a[1];
+t || a[0] !== e || (t = a[1]);
+}
+return t;
+},
+_saveCookie: function(e, t, s) {
+var i = "";
+s && (i = "; expires=" + s.toGMTString()), document.cookie = e + cfg.domain + "=" + t.join("~") + i + "; domain=" + encodeURIComponent(cfg.domain) + "; path=/";
+},
+_saveSession: function() {
+status._saveCookie(status._sessionCookieName, status._session, null);
+},
+_savePersistent: function() {
+status._saveCookie(status._persistentCookieName, status._persistent, new Date(new Date().getTime() + 31536e6));
+},
+_getInt: function(e) {
+var t = parseInt(e);
+return isNaN(t) ? null : t;
+},
+_getDate: function(e) {
+var t = status._getInt(e);
+return null == t ? null : new Date(t);
+},
+_validateDate: function(e, t) {
+if (!(t && null == e || null != e && e.getTime)) throw "invalid value";
+},
+_validateString: function(e) {
+if (/[^a-zA-Z0-9\-]/.test(e)) throw "invalid value. cannot contain any of the characters in [^a-zA-Z0-9\\-]";
+},
+get visitorIdentifier() {
+return status._ensureData(), status._persistent[0];
+},
+set lastResponseToInvite(e) {
+if (0 !== e && 1 !== e && 2 !== e) throw "value not allowed";
+status._ensureData(), status._persistent[1] = e.toString(), status._savePersistent();
+},
+get lastResponseToInvite() {
+return status._ensureData(), status._getInt(status._persistent[1]);
+},
+set lastTimeOfferShown(e) {
+status._validateDate(e), status._ensureData(), status._persistent[2] = e.getTime().toString(), 
+status._savePersistent();
+},
+get lastTimeOfferShown() {
+return status._ensureData(), status._getDate(status._persistent[2]);
+},
+set lastTimeApiResponded(e) {
+status._validateDate(e), status._ensureData(), status._persistent[3] = e.getTime().toString(), 
+status._savePersistent();
+},
+get lastTimeApiResponded() {
+return status._ensureData(), status._getDate(status._persistent[3]);
+},
+set lastResponseFromApi(e) {
+if (0 !== e && 1 !== e && 2 !== e) throw "value not allowed";
+status._ensureData(), status._persistent[4] = e.toString(), status._savePersistent();
+},
+get lastResponseFromApi() {
+return status._ensureData(), status._getInt(status._persistent[4]);
+},
+set locale(e) {
+status._validateString(e), status._ensureData(), status._session[0] = e || "", status._saveSession();
+},
+get locale() {
+return status._ensureData(), status._session[0];
+},
+set customerType(e) {
+if (0 !== e && 1 !== e) throw "value not allowed";
+status._ensureData(), status._session[1] = e, status._saveSession();
+},
+get customerType() {
+return status._ensureData(), status._getInt(status._session[1]);
+},
+set offerIdentifier(e) {
+status._validateString(e), status._ensureData(), status._session[2] = e || "", status._saveSession();
+},
+get offerIdentifier() {
+return status._ensureData(), status._session[2];
+},
+set nextTimeToShowInvitation(e) {
+status._validateDate(e, !0), status._ensureData(), status._session[3] = null == e ? "" : e.getTime().toString(), 
+status._saveSession();
+},
+get nextTimeToShowInvitation() {
+return status._ensureData(), status._getDate(status._session[3]);
+},
+set pageClicks(e) {
+if (!(0 <= e)) throw "value not allowed";
+status._ensureData(), status._session[5] = e.toString(), status._saveSession();
+},
+get pageClicks() {
+return status._ensureData(), status._getInt(status._session[5]);
+},
+set pageViewData(e) {
+if (!(0 <= e)) throw "value not allowed";
+status._ensureData(), status._session[6] = e.toString(), status._saveSession();
+},
+get pageViewData() {
+return status._ensureData(), status._getInt(status._session[6]);
+},
+set sessionClicks(e) {
+if (!(0 <= e)) throw "value not allowed";
+status._ensureData(), status._session[7] = e.toString(), status._saveSession();
+},
+get sessionClicks() {
+return status._ensureData(), status._getInt(status._session[7]);
+},
+set etrackClientId(e) {
+status._validateString(e), status._ensureData(), status._session[8] = e || "", status._saveSession();
+},
+get etrackClientId() {
+return status._ensureData(), status._session[8];
+},
+set callEvent(e) {
+if (0 !== e && 1 !== e && 2 !== e) throw "value not allowed";
+status._ensureData(), status._session[4] = e.toString(), status._saveSession();
+},
+get callEvent() {
+return status._ensureData(), status._getInt(status._session[4]);
+}
+};
+null === status.lastTimeOfferShown && (status.lastTimeOfferShown = new Date(-1));
+var tempAdditionalData = {}, svc = {
+setClassName: function(e, t, s) {
+s && (e.className = e.className.replace(s, "")), e.className = e.className + " " + t;
+},
+getById: function(e) {
+return document.getElementById(e);
+},
+stringify: function(e) {
+var t = [], s = 0;
+for (var i in e) {
+var a = e[i];
+t[s++] = a + ":" + ("function" == typeof this[a] ? this[a].toString() : '"' + this[a] + '"');
+}
+return "{" + t.join(",") + "}";
+},
+validateEmail: function(e) {
+return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(e);
+},
+isMobile: function() {
+return null == svc._isMobile && (svc._isMobile = /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0, 4))), 
+svc._isMobile;
+},
+sessionStoragePrefix: "etrack_",
+getSessionStorage: function(e) {
+return sessionStorage.getItem(this.sessionStoragePrefix + e);
+},
+setSessionStorage: function(e, t) {
+return sessionStorage.setItem(this.sessionStoragePrefix + e, t);
+},
+requestServer: cfg.serverAddress,
+loggingInfo: [ [ "etr-api-consumer=" + cfg.apiConsumerIdentifier ], [ "etr-project-id=" + cfg.projectId ], [ "etr-visitor-id=" + status.visitorIdentifier ] ].join("&"),
+sendRequest: function(e, t, s, i) {
+var a = new XMLHttpRequest();
+a.onreadystatechange = function() {
+var e;
+4 === a.readyState && 200 === a.status && (e = a.responseText, s && s.call(void 0, e));
+};
+var n = "?";
+0 <= t.indexOf("?") && (n = "&"), n += this.loggingInfo, a.open(e || "POST", this.requestServer + t + n), 
+a.send(i);
+},
+setRequest: function(e, t, s, i) {
+this.sendRequest(e, t, s, JSON.stringify(i));
+},
+get: function(e, t) {
+this.sendRequest("GET", e, t);
+},
+post: function(e, t, s) {
+this.setRequest("POST", e, t, s);
+},
+getRequestProperties: function() {
+return [ "get", "post", "put", "requestServer", "sendRequest", "setRequest", "loggingInfo" ];
+},
+show: function(e) {
+e.style.display = "block";
+},
+hide: function(e) {
+e.style.display = "none";
+},
+fadein: function(e) {
+e.style.visibility = "visible", svc.setClassName(e, "etrack-invite-in", "etrack-invite-out");
+},
+fadeout: function(t, s) {
+if (void 0 === t.style.animation) t.style.visibility = "hidden", s && s(); else {
+var i = function(e) {
+t.style.visibility = "hidden", t.removeEventListener("animationend", i), s && s();
+};
+t.addEventListener("animationend", i);
+}
+svc.setClassName(t, "etrack-invite-out", "etrack-invite-in");
+},
+activate: function(e) {
+e.style.opacity = 1, e.style.filter = "alpha(opacity=100)";
+},
+deactivate: function(e, t) {
+void 0 === t && (t = 50), e.style.opacity = t / 100, e.style.filter = "alpha(opacity=" + t + ")";
+},
+getVisualProperties: function() {
+return [ "show", "hide", "fadein", "fadeout", "activate", "deactivate" ];
+},
+customerConvertedToPurchaser: function() {
+1 !== status.customerType && (status.customerType = 1, svc.setData({
+CustomerType: "purchaser"
+}));
+},
+setData: function(e) {
+if (status.offerIdentifier) svc.post("SetAdditionalData", null, {
+OfferIdentifier: status.offerIdentifier,
+AdditionalData: e
+}); else for (var t in e) tempAdditionalData[t] = e[t];
+}
+};
+} catch (e) {
+LogEtrackEvents("status svc JS error ", e.message, "Error");
+}
+var timeouts = {
+showOffer: null,
+hideOffer: null
+};
+try {
+var apiSurface = {
+getStatus: function() {
+return {
+lastResponseToInvite: status.lastResponseToInvite,
+locale: status.locale,
+nextTimeToShowInvitation: status.nextTimeToShowInvitation,
+offerIdentifier: status.offerIdentifier,
+customerType: status.customerType,
+lastResponseFromApi: status.lastResponseFromApi,
+lastTimeApiResponded: status.lastTimeApiResponded,
+lastTimeOfferShown: status.lastTimeOfferShown,
+visitorIdentifier: status.visitorIdentifier
+};
+},
+setData: function(e) {
+svc.setData(e);
+},
+customerConvertedToPurchaser: function() {
+svc.customerConvertedToPurchaser();
+},
+disableInvitationOffer: function() {
+cfg.invitationOfferDisabled = !0;
+},
+enableInvitationOffer: function() {
+cfg.invitationOfferDisabled = !1;
+},
+setConversionPaths: function(e) {
+cfg.convertToPurchaserUrls = e;
+},
+setInvitationOfferDisabledPaths: function(e) {
+cfg.disableInviteUrls = e;
+},
+setLocale: function(e) {
+status.locale = e;
+},
+getConfiguration: function() {
+return cfg;
+}
+}, waitTimeFromWindowLoad = 1e3 * Math.abs(parseInt(cfg.waitTimeFromWindowLoad)) || 5;
+window.setTimeout(function() {
+var e = document.createEvent("CustomEvent");
+e.initCustomEvent("smgetr:interceptReady", !0, !0, apiSurface), document.dispatchEvent(e), 
+process();
+}, waitTimeFromWindowLoad);
+} catch (e) {
+LogEtrackEvents("API functionality JS error ", e.message, "Error");
+}
+document.addEventListener("smgetr:feedbackActivated", feedbackTabListener), document.addEventListener("smgetr:feedbackSubmitted", feedbackTabListener), 
+document.addEventListener("smgetr:feedbackTabReady", feedbackTabListener);
+}
+function secondsBetween(e, t) {
+return (e.getTime() - t.getTime()) / 1e3;
+}
+function shouldRequestInvitationOfferFromApi() {
+try {
+var e = new Date();
+if (0 != Math.floor(Math.random() * cfg.OfferCountConfiguration)) return !1;
+if (0 === status.lastResponseFromApi) return !0;
+var t = secondsBetween(e, status.lastTimeOfferShown);
+if (1 === status.lastResponseFromApi) {
+if (1 === status.lastResponseToInvite && t > cfg.timeBeforeNextOfferFromYes) return !0;
+if (2 === status.lastResponseToInvite && t > cfg.timeBeforeNextOfferFromNo) return !0;
+} else if (2 === status.lastResponseFromApi && t > cfg.timeBeforeNextOfferFromNonOffer) return !0;
+return !1;
+} catch (e) {
+LogEtrackEvents("shouldRequestInvitationOfferFromApi JS error ", e.message, "Error");
+}
+}
+function process() {
+try {
+var etrackClientSurveyIdentifier = "";
+null !== document.getElementById("eTrackClientSurveyIdentifier") && (etrackClientSurveyIdentifier = document.getElementById("eTrackClientSurveyIdentifier").value), 
+status.etrackClientId = etrackClientSurveyIdentifier;
+var tests = "";
+if (tests = Processrules(cfg.targetConditions, !1, tests), 0 < tests.length) try {
+var result = eval(tests);
+} catch (e) {
+result = !1;
+}
+for (var currentUrl = window.location.href.toLowerCase(), i = 0; i < cfg.convertToPurchaserUrls.length; i++) 0 <= currentUrl.indexOf(cfg.convertToPurchaserUrls[i].toLowerCase()) && svc.customerConvertedToPurchaser();
+for (var i = 0; i < cfg.disableInviteUrls.length; i++) 0 <= currentUrl.indexOf(cfg.disableInviteUrls[i].toLowerCase()) && (cfg.invitationOfferDisabled = !0);
+if (svc.isMobile()) for (var i = 0; i < cfg.suppressMobileOnly.length; i++) currentUrl.toLowerCase() === cfg.suppressMobileOnly[i].toLowerCase() && (cfg.invitationOfferDisabled = !0);
+var rightNow = new Date();
+if (status.offerIdentifier) {
+var secondsFromLastShown = secondsBetween(rightNow, status.lastTimeOfferShown);
+if (1 === status.lastResponseToInvite && secondsFromLastShown < cfg.timeBeforeNextOfferFromYes) return null;
+if (!(1 === status.lastResponseToInvite && secondsFromLastShown > cfg.timeBeforeNextOfferFromYes)) return status.nextTimeToShowInvitation <= rightNow && 0 === status.lastResponseToInvite ? showOffer() : status.nextTimeToShowInvitation >= rightNow && 0 === status.lastResponseToInvite && 1 === status.callEvent && (status.callEvent = 0, 
+window.setTimeout(showOffer, status.nextTimeToShowInvitation - rightNow)), null;
+status.lastResponseFromApi = 0, status.lastResponseToInvite = 0, status.offerIdentifier = "";
+}
+if (shouldRequestInvitationOfferFromApi()) {
+var rioPost = {
+ApiConsumerIdentifier: cfg.apiConsumerIdentifier,
+ProjectId: cfg.projectId,
+VisitDate: formattedNow(),
+VisitorIdentifier: status.visitorIdentifier,
+AdditionalData: {
+DeviceType: svc.isMobile() ? "mobile" : "desktop",
+ClientSite: window.location.hostname,
+RulesPassed: "OfferCount",
+TargetResult: result
+}
+};
+for (var key in tempAdditionalData) rioPost.AdditionalData[key] = tempAdditionalData[key];
+tempAdditionalData = {}, status.lastResponseFromApi = 2, svc.post("RequestInvitationOffer", function(e) {
+var t = JSON.parse(e);
+if (t.OfferIdentifier) {
+LogEtrackEvents("Invitation Requested", "Invitation received", "Debug"), status.lastResponseFromApi = 1, 
+status.locale || (status.locale = t.Locale), status.offerIdentifier = t.OfferIdentifier;
+var s = 1e3 * cfg.timeBeforeOffer;
+status.nextTimeToShowInvitation = new Date(new Date().getTime() + s), window.setTimeout(showOffer, s);
+} else LogEtrackEvents("Invitation Requested", "No Invitation", "Debug"), status.lastResponseFromApi = 2;
+status.lastTimeApiResponded = new Date();
+}, rioPost);
+}
+} catch (e) {
+LogEtrackEvents("process JS error ", e.message, "Error");
+}
+}
+function showOffer() {
+try {
+if (!0 === cfg.invitationOfferDisabled) return !1;
+var e = svc.getSessionStorage("offer-popup");
+return e && "undefined" !== e ? createOfferPopup(e) : svc.get("InvitationUiScreens?projectId=" + cfg.projectId + "&locale=" + status.locale + (svc.isMobile() ? "&screenNames[0]=mobile-invitation" : "&screenNames[0]=desktop-invitation&screenNames[1]=desktop-wait"), function(e) {
+createOfferPopup(e), svc.setSessionStorage("offer-popup", e);
+});
+} catch (e) {
+LogEtrackEvents("showOffer JS error ", e.message, "Error");
+}
+}
+function delayForPopup() {
+status.nextTimeToShowInvitation = new Date(new Date().getTime() + 1e3 * cfg.ClientPopupTimer);
+var e = 1e3 * Math.abs(parseInt(cfg.ClientPopupTimer)) || 30;
+window.setTimeout(showOffer, e);
+}
+function createOfferPopup(e) {
+try {
+if (null === document.getElementById("smg-etr-invitation-container")) {
+var t = JSON.parse(e), s = svc.isMobile() ? "mobile-invitation" : "desktop-invitation", i = document.createElement("div");
+i.id = "smg-etr-invitation-container", i.style.position = "absolute", i.style.top = "0", 
+i.style.left = "0", i.style.zIndex = cfg.zIndex || 1e4, i.innerHTML = t[s], document.getElementsByTagName("body")[0].appendChild(i);
+}
+showOfferPopup();
+} catch (e) {
+LogEtrackEvents("createOfferPopup JS error ", e.message, "Error");
+}
+}
+function showOfferPopup() {
+try {
+if (feedbackTab && feedbackTab.isActive) return;
+if (cfg.ClientPopupOverride && (0 < $(".modal.in").length || $(".ui-dialog").is(":visible") || window.opener && window.opener !== window)) return void delayForPopup();
+feedbackTab && "function" == typeof feedbackTab.disable && feedbackTab.disable();
+var e = svc.getById("smg-etr-invitation"), t = Math.min(600, window.innerWidth), s = window.innerWidth / 2 - t / 2;
+e.style.width = t + "px", e.style.bottom = "0px", e.style.left = s + "px", svc.getById("smg-etr-invitation-close").onclick = sayNoToOffer, 
+svc.getById("smg-etr-invitation-no").onclick = sayNoToOffer, svc.getById("smg-etr-invitation-yes").onclick = sayYesToOffer, 
+svc.fadein(e), status.lastTimeOfferShown = new Date(), LogEtrackEvents("Pop up", "Pop up presented", "Debug"), 
+status.nextTimeToShowInvitation = new Date(new Date().getTime() + 1e3 * (cfg.timeOfferDisplayed + cfg.timeOfferHidden)), 
+timeouts.hideOffer = window.setTimeout(function() {
+svc.fadeout(e, function() {
+feedbackTab && "function" == typeof feedbackTab.enable && feedbackTab.enable();
+}), timeouts.showOffer = window.setTimeout(function() {
+showOfferPopup();
+}, 1e3 * cfg.timeOfferHidden);
+}, 1e3 * cfg.timeOfferDisplayed);
+} catch (e) {
+LogEtrackEvents("showOfferPopup JS error ", e.message, "Error");
+}
+}
+function removePopup() {
+try {
+return svc.fadeout(svc.getById("smg-etr-invitation"), function() {
+svc.getById("smg-etr-invitation-container").parentNode.removeChild(svc.getById("smg-etr-invitation-container")), 
+feedbackTab && "function" == typeof feedbackTab.enable && feedbackTab.enable();
+}), !1;
+} catch (e) {
+LogEtrackEvents("removePopup JS error ", e.message, "Error");
+}
+}
+function closeOffer(e) {
+try {
+var t = status.offerIdentifier;
+return e || (LogEtrackEvents("Pop up Acknowledgment", "dismissed", "Debug"), status.offerIdentifier = ""), 
+status.lastResponseToInvite = e ? 1 : 2, removePopup(), window.clearTimeout(timeouts.showOffer), 
+window.clearTimeout(timeouts.hideOffer), svc.post("SetOfferAccepted", null, {
+OfferIdentifier: t,
+OfferAccepted: e
+}), !1;
+} catch (e) {
+LogEtrackEvents("closeOffer JS error ", e.message, "Error");
+}
+}
+function sayYesToOffer(e) {
+try {
+if (e.preventDefault(), svc.isMobile()) {
+LogEtrackEvents("Pop up Acknowledgment Mobile", "accepted", "Debug"), svc.hide(svc.getById("smg-etr-mobile-question")), 
+svc.show(svc.getById("smg-etr-mobile-email")), window.clearTimeout(timeouts.showOffer), 
+window.clearTimeout(timeouts.hideOffer), svc.getById("smg-etr-email-send").style["pointer-events"] = "none", 
+svc.deactivate(svc.getById("smg-etr-email-send"));
+var t = svc.getById("smg-etr-email-address");
+t.oninput = handleEmailInput, t.onkeyup = handleEmailInput, svc.getById("smg-etr-email-send").onclick = function(e) {
+return e.preventDefault(), sendEmailWithValidation(t.value.trim()), !1;
+};
+} else {
+LogEtrackEvents("Pop up Acknowledgment", "accepted", "Debug"), closeOffer(!0);
+var s = window.open("", "etrackSurveyHost", "scrollbars=yes,width=830,height=600");
+if (s) {
+var i = s.document, a = JSON.parse(svc.getSessionStorage("offer-popup"))["desktop-wait"];
+i.body.innerHTML = a, s.projectId = cfg.projectId, s.offerIdentifier = status.offerIdentifier, 
+s.locale = status.locale, s.etrackClientSurveyIdentifier = status.etrackClientId;
+var n = i.createElement("script");
+n.type = "text/javascript";
+var r = "var getReady = " + function() {
+var e = window.setInterval(function() {
+try {
+if (window.opener.location.href) return !1;
+} catch (e) {}
+window.clearInterval(e), svc.hide(document.getElementById("smg-etr-survey-wait")), 
+svc.show(document.getElementById("smg-etr-survey-ready")), svc.get("GetSurveyUrl?projectId=" + encodeURIComponent(projectId) + "&offerIdentifier=" + encodeURIComponent(offerIdentifier) + "&locale=" + encodeURIComponent(locale), function(s) {
+document.getElementById("smg-etr-begin-survey").onclick = function(e) {
+e.preventDefault();
+var t = JSON.parse(s).Url + "&client-survey-identifier=" + encodeURIComponent(etrackClientSurveyIdentifier);
+window.location = t;
+};
+});
+}, 2e3);
+}.toString() + ";";
+r += "var svc = " + svc.stringify(svc.getRequestProperties().concat(svc.getVisualProperties()));
+try {
+n.appendChild(i.createTextNode(r)), i.body.appendChild(n);
+} catch (e) {
+LogEtrackEvents("sayYesToOffer append child JS error ", e.message, "Error"), n.text = r, 
+i.body.appendChild(n);
+}
+s.getReady();
+}
+}
+return !1;
+} catch (e) {
+LogEtrackEvents("sayYesToOffer JS error ", e.message, "Error");
+}
+}
+function sayNoToOffer(e) {
+return e.preventDefault(), closeOffer(!1), !1;
+}
+function sendEmailWithValidation(e) {
+try {
+if (toggleEmailValidationMessages(e)) {
+svc.hide(svc.getById("smg-etr-mobile-email")), svc.show(svc.getById("smg-etr-mobile-thanks")), 
+svc.getById("smg-etr-invitation-close").onclick = function(e) {
+e.preventDefault(), removePopup();
+};
+var t = parseInt(svc.getById("smg-etr-invitation").getAttribute("data-auto-fade-out"));
+return isNaN(t) && (t = 5e3), window.setTimeout(removePopup, t), svc.post("SendEmailedSurvey", null, {
+ProjectId: cfg.projectId,
+OfferIdentifier: status.offerIdentifier,
+EmailAddress: e,
+Locale: status.locale
+}), status.lastResponseToInvite = 1, !0;
+}
+return !1;
+} catch (e) {
+LogEtrackEvents("sendEmailWithValidation JS error ", e.message, "Error");
+}
+}
+function hideEmailValidationMessages() {
+svc.hide(svc.getById("smg-etr-email-missing")), svc.hide(svc.getById("smg-etr-email-invalid"));
+}
+function toggleEmailValidationMessages(e) {
+try {
+return e ? svc.validateEmail(e) ? (hideEmailValidationMessages(), !0) : (svc.hide(svc.getById("smg-etr-email-missing")), 
+svc.show(svc.getById("smg-etr-email-invalid")), !1) : (svc.show(svc.getById("smg-etr-email-missing")), 
+svc.hide(svc.getById("smg-etr-email-invalid")), !1);
+} catch (e) {
+LogEtrackEvents("toggleEmailValidationMessages JS error ", e.message, "Error");
+}
+}
+function handleEmailInput(e) {
+try {
+var t = e.target.value.trim();
+if (13 === e.keyCode) return void sendEmailWithValidation(t);
+t.length && svc.validateEmail(t) ? (svc.activate(svc.getById("smg-etr-email-send")), 
+svc.getById("smg-etr-email-send").style["pointer-events"] = "auto") : (svc.deactivate(svc.getById("smg-etr-email-send")), 
+svc.getById("smg-etr-email-send").style["pointer-events"] = "none"), hideEmailValidationMessages();
+} catch (e) {
+LogEtrackEvents("handleEmailInput JS error ", e.message, "Error");
+}
+}
+function formattedNow() {
+var e = new Date();
+return e.getFullYear() + "-" + t(e.getMonth() + 1) + "-" + t(e.getDate()) + " " + t(e.getHours()) + ":" + t(e.getMinutes()) + ":" + t(e.getSeconds()) + "Z";
+function t(e) {
+return (e < 10 ? "0" : "") + e;
+}
+}
+function feedbackTabListener(e) {
+"smgetr:feedbackTabReady" === e.type ? feedbackTab = e.detail : "smgetr:feedbackActivated" === e.type ? feedbackTab.isActive = !0 : "smgetr:feedbackSubmitted" === e.type && e.detail.wasSent && (status.lastTimeApiResponded = new Date(), 
+status.lastResponseFromApi = 2, status.offerIdentifier = "");
+}
+function Processrules(e, t, s) {
+try {
+0 < e.length && (s += "(");
+for (var i = 0; i < e.length; i++) {
+var a = e[i];
+switch (a.condition_test) {
+case "NumericTest":
+var n = 0;
+switch (a.condition_name) {
+case "pageViews":
+n = status.pageViewData;
+break;
+
+case "pageClicks":
+n = status.pageClicks;
+break;
+
+case "sessionClicks":
+n = status.sessionClicks;
+break;
+
+default:
+n = 0;
+}
+s = NumericTest(n, a.condition_variable, a.condition_logic, s);
+break;
+
+case "targetDevice":
+s = targetDevice(a.condition_variable, s);
+break;
+
+case "UrlStringTest":
+var r = a.condition_variable.toString().toLowerCase();
+r.match("/$") && (r = r.substring(0, r.length - 1));
+var o = window.location.href.toLowerCase();
+o.match("/$") && (o = o.substring(0, o.length - 1)), s = StringTest(r, a.condition_logic, o, s);
+}
+0 < a.grouped_with.length && (s = spinRules(a.grouped_with, !0, s) + ")"), i != e.length - 1 && (s += " || ");
+}
+return 0 < e.length && (s += ")"), s;
+} catch (e) {
+LogEtrackEvents("Processrules JS error ", e.message, "Error");
+}
+}
+function spinRules(e, t, s) {
+for (var i = 0; i < e.length; i++) s = ProcessSubrules(e[i], t, s), t = !1;
+return s;
+}
+function ProcessSubrules(e, t, s) {
+try {
+switch (s += t ? " && (" : " || ", e.condition_test) {
+case "NumericTest":
+var i = 0;
+switch (e.condition_name) {
+case "pageViews":
+i = status.pageViewData;
+break;
+
+case "pageClicks":
+i = status.pageClicks;
+break;
+
+case "sessionClicks":
+i = status.sessionClicks;
+break;
+
+default:
+i = 0;
+}
+s = NumericTest(i, e.condition_variable, e.condition_logic, s);
+break;
+
+case "targetDevice":
+s = targetDevice(e.condition_variable, s);
+break;
+
+case "UrlStringTest":
+var a = e.condition_variable.toString().toLowerCase();
+a.mathc("/$") && (a = a.substring(0, a.length - 1));
+var n = window.location.href.toLowerCase();
+n.match("/$") && (n = n.substring(0, n.length - 1)), s = StringTest(a, e.condition_logic, n, s);
+}
+return 0 < e.grouped_with.length && (s = spinRules(e.grouped_with, !0, s) + ")"), 
+s;
+} catch (e) {
+LogEtrackEvents("ProcessSubrules JS error ", e.message, "Error");
+}
+}
+function NumericTest(e, t, s, i) {
+try {
+switch (s) {
+case "=":
+i += e === t ? " true" : " false";
+break;
+
+case ">":
+i += t < e ? " true" : " false";
+break;
+
+case "<":
+i += e < t ? " true" : " false";
+break;
+
+case ">=":
+i += t <= e ? " true" : " false";
+break;
+
+case "<=":
+i += e <= t ? " true" : " false";
+break;
+
+default:
+i += " false";
+}
+return i;
+} catch (e) {
+LogEtrackEvents("NumericTest JS error ", e.message, "Error");
+}
+}
+function targetDevice(e, t) {
+try {
+switch (e.toLowerCase()) {
+case "desktop":
+svc.isMobile() ? t += " false" : t += " true";
+break;
+
+case "mobile":
+svc.isMobile() ? t += " true" : t += " false";
+break;
+
+default:
+t += " false";
+}
+return t;
+} catch (e) {
+LogEtrackEvents("targetDevice test JS error ", e.message, "Error");
+}
+}
+function StringTest(e, t, s, i) {
+try {
+switch (criteriatotest = e.toLowerCase(), stringtotest = s.toLowerCase(), t.toLowerCase()) {
+case "matches exactly":
+stringtotest === criteriatotest ? i += " true" : i += " false";
+break;
+
+case "contains":
+0 <= stringtotest.indexOf(criteriatotest) ? i += " true" : i += " false";
+break;
+
+case "starts with":
+var a = new RegExp("^", criteriatotest);
+stringtotest.match(a) ? i += " true" : i += " false";
+break;
+
+case "ends with":
+var n = new RegExp(criteriatotest, "$");
+stringtotest.match(n) ? i += " true" : i += " false";
+break;
+
+default:
+return !1;
+}
+return i;
+} catch (e) {
+LogEtrackEvents("UrlStringTest JS error ", e.message, "Error");
+}
+}
+function LogEtrackEvents(e, t, s) {
+if (void 0 !== cfg.logLevel && (cfg.logLevel.toLowerCase() === s.toLowerCase() || "debug" === cfg.logLevel.toLowerCase() && "error" === s.toLowerCase())) {
+var i = {
+ApiConsumerIdentifier: cfg.apiConsumerIdentifier,
+ProjectId: cfg.projectId,
+EventDate: formattedNow(),
+VisitorIdentifier: status.visitorIdentifier,
+Event: e,
+CookieData: "persistant Cookie: " + status._getCookie(status._persistentCookieName) + " Session Cookie: " + status._getCookie(status._sessionCookieName),
+Result: t
+};
+svc.post("Logging", function(e) {
+return JSON.parse(e);
+}, i);
+}
+}
+})();

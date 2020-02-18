@@ -1,0 +1,3 @@
+//tealium universal tag - utag.sync ut4.0.201901101232, Copyright 2019 Tealium.com Inc. All Rights Reserved.
+var monetateT=new Date().getTime();if(location.hostname===('www.sainsburys.co.uk')){document.write('<script type="text/javascript" src="//se.monetate.net/js/2/a-e7a83e6a/p/sainsburys.co.uk.shop.gb.groceries/entry.js"></script>');}else{document.write('<script type="text/javascript" src="//se.monetate.net/js/2/a-e7a83e6a/d/sainsburys.co.uk.shop.gb.groceries/entry.js"></script>');}
+var monetateQ=monetateQ||[];

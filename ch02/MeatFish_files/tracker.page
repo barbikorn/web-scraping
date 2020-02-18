@@ -1,0 +1,383 @@
+
+
+
+// <script>
+(function(){
+
+Peerius.trackingUrl="https://sainsburysgroceries.peerius.com/tracker/trackerform.page";
+Peerius.getRecs=function(trackingId) {
+    if(this.isOptIn()) {
+        this.runScript(this.serverUrl+"/recs.page?sessionId="+this.esc(this.getSessionId())+"&trackingId="+this.esc(trackingId))
+    }
+};
+Peerius.sendMsg = function(method,msg,callback) {
+    var l=this.msgHandlers.length
+    this.msgHandlers[l]=callback
+    this.pp["handlerId"]=l
+    this.send(method,msg,this.trackingUrl)
+};
+Peerius.error=function(msg,e) {
+    var m=msg+" : "+e+"\n"
+    if (e.lineNumber) m+="line:"+e.lineNumber+"\n"
+    if (e.description) m+="description: "+e.description+"\n"
+    m+="url: "+window.location.href+"\n"
+    Peerius.send("error",m,this.trackingUrl)
+};
+
+
+
+
+try {
+	
+if(window.location.href.indexOf("OrderShippingBillingConfirmationView") == -1){
+    if(typeof peeriusTrackingSent === "undefined"){
+        peeriusTrackingSent = false;
+    }
+    Peerius.oldSend = Peerius.send;
+    Peerius.send = function(method, msg, serverUrl) {
+        peeriusTrackAndSendInterval = setInterval(function() {
+            if (!peeriusTrackingSent && peeriusIsDigitalDataReady()) {
+                peeriusTrackingSent = true;
+                peeriusPrepareJSONData();
+                var t = "<_di><json><![CDATA[" + JSON.stringify(PeeriusCallbacks.track) + "]]></json></_di>";
+                Peerius.extraXml = t;
+                Peerius.oldSend(method, "<_>" + Peerius.extraXml + "</_>", serverUrl);
+            }
+        }, 50);
+    }
+
+    setTimeout(function(){clearInterval(peeriusTrackAndSendInterval); }, 40000);
+
+    peeriusIsDigitalDataReady = function() {
+        if(digitalData && digitalData.page && digitalData.page.pageInfo){
+            var peeriusPN = digitalData.page.pageInfo.pageName;
+            var peeriusPTMap = {
+                "homePage": "home",
+                "fullTrolley": "basket",
+                "fullTrolleyPage": "basket",
+                "productUpsell": "basket",
+                "missedFavourites": "basket",
+                "shelfPage": "category",
+                "zonePage": "category",
+                "departmentPage": "category",
+                "aislePage": "category",
+                "zonePage": "category",
+                "favouritesSingleList": "wishlist",
+                "favouritesPreviousOrder": "wishlist",
+                "favouritesOnOffer": "wishlist",
+                "favsByAisle": "wishlist",
+                "favouritesImported": "wishlist",
+                "favouritesPage": "wishlist",
+                "billingDetails": "checkout",
+                "paymentPage": "checkout",
+                "order": "other",
+                "orderConfirmation": "other",
+                "checkoutOrderConfirm":"other"
+            };
+            var peeriusPT = peeriusPTMap[peeriusPN];
+            //page types on product and search have variable SKUs in the name so we need to look for "contains"
+            if (peeriusPN.indexOf("productDetails") > -1 || peeriusPN.indexOf("pdp:") > -1) {
+                peeriusPT = "product";
+            }
+            if (peeriusPT == "product" || peeriusPT == "wishlist") {
+                if (digitalData.product) {
+                    return true
+                } else {
+                    return false
+                }
+            }
+            else if(peeriusPT == "order") {
+                if(digitalData.transaction) {
+                    return true
+                } else {
+                    return false
+                }
+            }
+            else {
+                return true
+            }
+        }
+        else{
+            return false
+        }
+    }
+
+    peeriusPrepareJSONData = function() {
+        try{
+            clearInterval(peeriusTrackAndSendInterval);
+            var peeriusPageName = digitalData.page.pageInfo.pageName;
+            var peeriusChannel = digitalData.page.pageInfo.rendering;
+            //Mapping between their page types and ours (on mobile site their page types differ)
+            var peeriusPageTypeMap = {
+                "homePage": "home",
+                "fullTrolley": "basket",
+                "fullTrolleyPage": "basket",
+                "productUpsell": "basket",
+                "missedFavourites": "basket",
+                "shelfPage": "category",
+                "zonePage": "category",
+                "departmentPage": "category",
+                "aislePage": "category",
+                "zonePage": "category",
+                "favouritesSingleList": "wishlist",
+                "favouritesPreviousOrder": "wishlist",
+                "favouritesOnOffer": "wishlist",
+                "favsByAisle": "wishlist",
+                "favouritesImported": "wishlist",
+                "favouritesPage": "wishlist",
+                "billingDetails": "checkout",
+                "paymentPage": "checkout",
+                "order": "other",
+                "orderConfirmation": "other",
+                "checkoutOrderConfirm":"other"
+            };
+            var peeriusPageType = peeriusPageTypeMap[peeriusPageName];
+            //page types on product and search have variable SKUs in the name so we need to look for "contains"
+            if (peeriusPageName.indexOf("productDetails") > -1 || peeriusPageName.indexOf("pdp:") > -1) {
+                peeriusPageType = "product";
+            } else if (peeriusPageName.indexOf("searchResultsPage") > -1 || peeriusPageName.indexOf("shoppingListResults") > -1 || peeriusPageName.indexOf("searchPage") > -1) {
+                peeriusPageType = "searchresults";
+            }
+            //if everything above fails it must be "other"
+            if (typeof peeriusPageType === "undefined") {
+                peeriusPageType = "other";
+            }
+            //if it's a product page, get refcode
+            var peeriusProductRefCode = "";
+            if (peeriusPageType === "product" && digitalData.product && digitalData.product[0] && digitalData.product[0].productInfo) {
+                peeriusProductRefCode = digitalData.product[0].productInfo.productId;
+                if(typeof digitalData.product[0].productInfo.productId == "object"){
+                    peeriusProductRefCode = digitalData.product[0].productInfo.productId[0];
+                }
+                if(digitalData.product[0].productInfo.productId == "" && digitalData.page && digitalData.page.pageInfo && digitalData.page.pageInfo.pageName){
+                    if(digitalData.page.pageInfo.pageName.indexOf(":")>-1){
+                        peeriusProductRefCode = digitalData.page.pageInfo.pageName.split(":")[1]
+                    }
+                }
+            }
+            //clean up of categories, when we have correct prod feed it should match 100%
+            var peeriusCategory = "";
+            if (peeriusPageType === "category" && digitalData.page.pageInfo && digitalData.page.pageInfo.breadCrumbs) {
+                peeriusCategory = digitalData.page.pageInfo.breadCrumbs.split("::")
+                if (peeriusCategory[0] == "Groceries") {
+                    peeriusCategory.shift();
+                }
+                peeriusCategory = peeriusCategory.join(">");
+            }
+
+            var peeriusCurrency = "GBP";
+            var peeriusUserEmail = "";
+            //User email is made of <websphereId>@sainsburys.co.uk
+            if (digitalData.thirdPartyData && digitalData.thirdPartyData.peeriusData && digitalData.thirdPartyData.peeriusData[0] && digitalData.thirdPartyData.peeriusData[0].user) {
+                peeriusUserEmail = digitalData.thirdPartyData.peeriusData[0].user.email;
+            }
+            //In new deep integration 1.3 version we need to track number of results and term
+            var peeriusSearchTerm = peeriusPageType === "searchresults" && digitalData.page && digitalData.page.search ? digitalData.page.search[0].onsiteSearchTerm : "";
+            var peeriusSearchResultsCount = peeriusPageType === "searchresults" && digitalData.page && digitalData.page.search ? digitalData.page.search[0].onsiteSearchResults : 0;
+
+            var peeriusWishListDigitalDataList = peeriusPageType === "wishlist" && digitalData.product ? digitalData.product : [];
+            var peeriusWishListItems = []
+
+            //If wishlist, get refcodes and add to the list. You might need to modify for loop to limit how many products we track (if the list is too long it might be slow)
+            if (peeriusPageType === "wishlist" && digitalData.product) {
+                for (var i = 0; i < peeriusWishListDigitalDataList.length; i++) {
+                    var peeriusWishListItem = peeriusWishListDigitalDataList[i];
+                    peeriusWishListItems.push({
+                        refCode: peeriusWishListItem["productInfo"].productId,
+                    });
+                }
+            }
+
+            var peeriusSubTotal = 0;
+            var peeriusTotal = 0;
+            var peeriusShippingCost = 0;
+            var peeriusOrderID = "";
+            var peeriusLineItems = [];
+
+            if ((peeriusPageType === "basket" || peeriusPageType === "checkout") && digitalData.user &&
+                digitalData.user.basket && digitalData.user.basket.currency) {
+                peeriusCurrency = "GBP";
+                peeriusLineItems = digitalData.user.basket.items;
+                peeriusSubTotal = digitalData.user.basket.subTotal;
+                peeriusTotal = digitalData.user.basket.grandTotal;
+                peeriusShippingCost = peeriusTotal - peeriusSubTotal;
+            } else if (peeriusPageType === "order" && digitalData.transaction && digitalData.transaction.item && digitalData.transaction.total) {
+                peeriusCurrency = "GBP";
+                peeriusSubTotal = digitalData.transaction.total.priceWithTax || 0;
+                peeriusTotal = digitalData.transaction.total.transactionTotal || 0;
+                peeriusOrderID = digitalData.transaction.orderId;
+                peeriusLineItems = digitalData.transaction.item;
+                peeriusShippingCost = peeriusTotal - peeriusSubTotal
+            }
+
+            var peeriusItems = [];
+            for (var i = 0; i < peeriusLineItems.length; i++) {
+                var peeriusLineItem = peeriusLineItems[i];
+                peeriusItems.push({
+                    refCode: peeriusLineItem["productInfo"].productId,
+                    qty: peeriusLineItem["altQuantity"],
+                    price: peeriusLineItem["altPrice"]
+                });
+            }
+            //From here we are buidling PeeriusCallbacks object out of data formatted above
+            if (typeof PeeriusCallbacks.track === "undefined") {
+                PeeriusCallbacks.track = {
+                    "type": peeriusPageType,
+                    "lang": "en-gb",
+                    "channel": peeriusChannel
+                };
+            };
+            if(peeriusUserEmail.indexOf("@") > -1){
+                PeeriusCallbacks.track.user = {
+                    "name": peeriusUserEmail,
+                    "email": peeriusUserEmail
+                }
+            }
+
+            if (peeriusPageType === "category" && peeriusCategory.length > 0) {
+                PeeriusCallbacks.track.category = peeriusCategory;
+            } else if (peeriusPageType === "product" && peeriusProductRefCode.length > 0) {
+                PeeriusCallbacks.track.product = PeeriusCallbacks.track.product || {};
+                PeeriusCallbacks.track.product.refCode = peeriusProductRefCode;
+            } else if (peeriusPageType === "basket") {
+                PeeriusCallbacks.track.basket = {
+                    items: peeriusItems,
+                    currency: peeriusCurrency
+                };
+            } else if (peeriusPageType === "checkout") {
+                PeeriusCallbacks.track.checkout = {
+                    items: peeriusItems,
+                    currency: peeriusCurrency,
+                    subtotal: peeriusSubTotal,
+                    shipping: peeriusShippingCost,
+                    total: peeriusTotal
+                };
+            } else if (peeriusPageType === "order") {
+                PeeriusCallbacks.track.order = {
+                    orderNo: peeriusOrderID,
+                    items: peeriusItems,
+                    currency: peeriusCurrency,
+                    subtotal: peeriusSubTotal,
+                    shipping: peeriusShippingCost,
+                    total: peeriusTotal
+                };
+            } else if (peeriusPageType === "searchresults") {
+                PeeriusCallbacks.track.searchResults = {
+                    term: peeriusSearchTerm,
+                    totalNumberOfResults: peeriusSearchResultsCount,
+                    topResults: []
+                };
+            } else if (peeriusPageType === "wishlist") {
+                PeeriusCallbacks.track.wishList = {
+                    items: peeriusWishListItems
+                };
+            }
+        }
+        catch(err){
+            //Do nothing
+        }
+    }
+}
+} catch(e) {
+	m=e+"\n";
+	if (e.lineNumber) m+="line:"+e.lineNumber+"\n";
+	if (e.description) m+="description: "+e.description+"\n";
+	Peerius.send("error",m,Peerius.trackingUrl);
+}
+
+function peerius_t()
+{
+Peerius.rId=174206356;
+
+var p_probe=false;
+var lastProbe="";
+
+
+
+
+Peerius.cCookie("peerius_sess","13444326451|ja755NWs2SIIzzlo6ZedSypKPaW4gOUNtfdCZ_LSLg4",4*3600);
+
+
+Peerius.sessionId='13444326451|ja755NWs2SIIzzlo6ZedSypKPaW4gOUNtfdCZ_LSLg4'
+
+
+Peerius.cCookie("peerius_user","cuid:8635511651|i1MCjEtrN--9oNwDj-Ereg",3600*24*360*20);
+
+
+function p_x()
+{
+	
+	var m="",e,_e,es;
+	var url=Peerius.trackingUrl;
+	var db=document.body;
+	try
+	{
+		
+
+		
+			
+			
+				
+				
+				
+					
+					Peerius.pp['pagename']=function(){if(typeof digitalData != "undefined" && typeof digitalData.page != "undefined" && typeof digitalData.page.pageInfo != "undefined"){return digitalData.page.pageInfo.pageName}else{return "undefined"}}();
+				
+				
+				
+				
+				
+				
+			
+		
+
+		
+		if (p_probe)
+		{
+			if (m!=lastProbe)
+			{
+				lastProbe=m;
+				throw 'probe again';
+			}
+		}
+		if(Peerius.extraXml) m+=Peerius.extraXml
+		Peerius.send("track","<_>"+m+"</_>",url);
+		p_probe=false;
+		
+		
+	} catch (e)
+	{
+		if(p_probe)
+		{
+			
+			
+				p_probe_cnt++;
+				if (p_probe_cnt>60) p_probe=false; 
+			
+			setTimeout(p_x,50); 
+		} else {
+			m=e+"\n";
+			if(!(typeof e=='string'))
+			{
+				for(var x in e)
+				{
+					try { m+=x+"="+e[x]+"\n" } catch(e){ m+=e }
+				}
+			}
+			
+			Peerius.send("error",m,url);
+		}
+	}
+}
+
+
+	
+	
+		
+		p_x();
+	
+
+}
+peerius_t();
+
+})();
